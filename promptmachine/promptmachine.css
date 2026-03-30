@@ -1,0 +1,51 @@
+body{
+    background-color: black;
+}
+
+.container{
+    width: 100%;
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container p{
+    font-size: 2rem;
+    text-align: center;
+}
+
+.newprompt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 300px;
+}
+
+.prompts{
+    width: 750px;
+    height: 250px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+    color: white;
+    text-align: left;
+}
+
+.prompts p{
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+@media (max-width: 600px) {
+    .prompts{
+        width: 100%;
+        height: auto;
+        padding: 40px;
+    }
+
+    .prompts p{
+        font-size: 1.5rem;
+    }
+}
