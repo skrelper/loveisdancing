@@ -18,11 +18,14 @@
 <body>
     <div class="container">
         <div class="prompts">
-            <p id="prompt">try... about...</p>
+            <p id="try">try...</p>
+            <div class="prompt">
+                <p id="prompt">[prompt]</p>
+            </div>
         </div>
     </div>
     <div class="newprompt">
-        <button onclick="roll()" type="button">new prompt</button>
+        <button onclick="roll()" type="button" id="button">new prompt</button>
     </div>
 
     <script src="promptmachinescript.js"></script>
