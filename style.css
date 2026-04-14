@@ -1,0 +1,176 @@
+html, body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+body{
+    background-color: white;
+    font-family: Pixelify Sans, sans-serif;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0;
+}
+
+#lid-logo{
+    margin: 0;
+    background-color: white;
+    max-height: 140px;
+    width: auto;
+    display: block;
+}
+
+.lid-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    margin-bottom: 20px;
+    padding: 0 20px 10px;
+    min-height: 100px;
+}
+
+.lid-logo img {
+    max-height: 70px;
+    min-height: 100px;
+    width: auto;
+    display: block;
+}
+
+h1{
+    color: white;
+    font-size: 0rem;
+    text-align: center;
+}
+
+a{
+    color: blue;
+}
+
+.container1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 650px;
+    flex-direction: column;
+    background-color: white;
+    padding: 20px 0;
+    box-sizing: border-box;
+}
+
+label{
+    color: black;
+    font-size: 1rem;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    margin-top: 0;
+}
+
+.pword{
+    width: 100%;
+}
+
+#password{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 35px 10px 10px;
+    font-size: 0.8rem;
+    border: black solid 1px;
+}
+
+#password:focus{
+    outline: none;
+    border-color: blue;
+}
+
+.star{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: black;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    position: relative;
+    width: 100%;
+}
+
+button.login{
+    width: 15%;
+    padding: 10px;
+    border: none;
+    background: white;
+    cursor: pointer;
+}
+
+button.login:hover {
+    background: black;
+    color: white;
+}
+
+#promptmachine{
+    transform: none;
+    margin-top: 1rem;
+}
+
+@media (max-width: 800px) {
+    body{
+    background-color: white;
+    font-family: Pixelify Sans, sans-serif;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0;
+    }
+
+    h1{
+        font-size: 0rem;
+    }
+
+    p{
+        font-size: 1.5rem;
+    }
+
+    #lid-logo{
+        min-height: 70px;
+        margin-bottom: 0px;
+    }
+
+    .pword{
+        width: 100%;
+        justify-items: center;
+    }
+
+    .input-container{
+        width: 75%;
+    }
+
+    .container1{
+        width: 100%;
+        padding: 0px;
+    }
+
+    #promptmachine{
+        font-size: 1.5rem;
+        margin-top: 2.5rem;
+    }
+}

@@ -1,0 +1,17 @@
+
+body{
+    background-color: white;
+    font-family: "Inter Tight", sans-serif;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0;
+    overflow: hidden;
+}
+
+#promptmachine{
+    font-family: Pixelify Sans, sans-serif;
+}
