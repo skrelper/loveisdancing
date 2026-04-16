@@ -93,7 +93,7 @@ body{
     display: flex;
     justify-content: top;
     align-items: center;
-    margin-top: 80px;
+    margin-top: 50px;
     padding-left: 45px;
     }
 
@@ -110,7 +110,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 120px;
     }
 
     #button:hover {
