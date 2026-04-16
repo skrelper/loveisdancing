@@ -3,9 +3,9 @@ let star = document.querySelector('.star');
 star.addEventListener('click', function () {
     if (input.type === 'password') {
         input.type = 'text';
-        star.textContent = '⏹';
+        star.textContent = '✧';
     } else {
         input.type = 'password';
-        star.textContent = '❤';
+        star.textContent = '✦';
     }
 })
