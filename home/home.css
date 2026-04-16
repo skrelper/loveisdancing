@@ -16,11 +16,19 @@ body{
     font-family: Pixelify Sans, sans-serif;
 }
 
+a {
+    color: cyan;
+}
+
+.subtext {
+    line-height: 0.25rem;
+}
+
 @media (max-width: 800px) {
     .container1{
-        width: 85%;
+        width: 80%;
     }
     #promptmachine{
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 }
