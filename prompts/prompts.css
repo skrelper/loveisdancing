@@ -80,7 +80,7 @@ body{
 
     #prompt{
         font-size: 1.6rem;
-        padding-top: 9px;
+        padding-top: 8px;
     }
 
     #button{
@@ -88,13 +88,14 @@ body{
     }
 
     .container{
-    width: 75%;
+    width: 85%;
     height: 50vh;
     display: flex;
     justify-content: top;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 0px;
     padding-left: 45px;
+    border: white solid 1px;
     }
 
     #try{
