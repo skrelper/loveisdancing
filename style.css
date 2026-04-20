@@ -1,7 +1,7 @@
 html, body {
     margin: 0;
-    height: 100vh;
-    overflow: hidden;
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 
 body{
@@ -194,7 +194,7 @@ span:hover {
     .lid-logo {
         max-width: 80vw;
         min-width: 200px;
-        padding: none;
+        padding: 0;
     }
 
     button.login {
