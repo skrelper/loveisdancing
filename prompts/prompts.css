@@ -75,7 +75,7 @@ body{
     .prompts{
         width: 100%;
         height: 100px;
-        padding: 15px;
+        padding: 10px;
     }
 
     #prompt{
@@ -88,7 +88,7 @@ body{
     }
 
     .container{
-    width: 85%;
+    width: 80%;
     height: 50vh;
     display: flex;
     justify-content: top;

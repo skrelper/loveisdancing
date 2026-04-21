@@ -192,7 +192,7 @@ span:hover {
     }
 
     .lid-logo {
-        max-width: 80vw;
+        max-width: 60vw;
         min-width: 200px;
         padding: 0;
     }
@@ -211,11 +211,25 @@ span:hover {
 @media (max-width: 800px) and (orientation: portrait) {
     
     .lid-logo {
-        max-width: 70vw;
+        max-width: 60vw;
         min-width: 150px;
     }
     
     .lid-logo img {
         max-height: 80px;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 800px) and (orientation: landscape) {
+    
+    .lid-logo {
+        max-width: 80vw;
+        min-width: 200px;
+    }
+    
+    .lid-logo img {
+        max-height: 100px;
+        max-width: 100%;
     }
 }
