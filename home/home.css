@@ -21,7 +21,9 @@ a {
 }
 
 .subtext {
-    line-height: 0.25rem;
+    line-height: 1rem;
+    margin-bottom: 0;
+    margin-top: 0;
 }
 
 @media (max-width: 800px) {
