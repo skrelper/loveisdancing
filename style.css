@@ -112,7 +112,9 @@ form{
 }
 
 ::placeholder{
-    color: rgb(88, 0, 0, 25%);
+    color: rgb(88, 0, 0, 35%);
+    font-family: Doto, sans-serif;
+    font-weight: bold;
 }
 
 input{
