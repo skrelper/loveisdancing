@@ -133,7 +133,7 @@ a:hover {
 
 
 .container1{
-    max-width: 400px;
+    max-width: 350px;
 
 }
 
@@ -149,6 +149,10 @@ a:hover {
 #ben {
     grid-template-columns: 1fr;
     
+}
+
+h1 {
+    width: 300px;
 }
 
 }
