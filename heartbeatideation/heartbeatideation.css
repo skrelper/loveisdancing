@@ -118,6 +118,14 @@ a:hover {
     margin-bottom: 20px;
 }
 
+.bottompic {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
 @media (max-width: 768px) {
 .intro {
         max-width: 400px;
@@ -138,4 +146,10 @@ a:hover {
     height: auto;
 }
 
+#ben {
+    grid-template-columns: 1fr;
+    
 }
+
+}
+
