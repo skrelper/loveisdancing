@@ -1,29 +1,29 @@
 @font-face {
-    font-family: "Video";
-    src: url("https://loveisdancing.com/iam/fonts/Video.otf") format("opentype");
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Video";
+  src: url("/assets/fonts/Video.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: "Video";
-    src: url("https://loveisdancing.com/iam/fonts/Video-Cond-Light.otf") format("opentype");
-    font-weight: lighter;
-    font-style: normal;
+  font-family: "Video";
+  src: url("/assets/fonts/Video-Cond-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: "Video";
-    src: url("https://loveisdancing.com/iam/fonts/Video-Cond-Med.otf") format("opentype");
-    font-weight: medium;
-    font-style: normal;
+  font-family: "Video";
+  src: url("/assets/fonts/Video-Cond-Med.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: "Video";
-    src: url("https://loveisdancing.com/iam/fonts/Video-Cond-Bold.otf") format("opentype");
-    font-weight: bold;
-    font-style: normal;
+  font-family: "Video";
+  src: url("/assets/fonts/Video-Cond-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
 }
 
 html, body {
