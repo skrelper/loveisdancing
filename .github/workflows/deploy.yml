@@ -19,16 +19,6 @@ jobs:
         with:
           node-version: '22'
 
-      - name: Debug runner environment
-        run: |
-          echo '--- node/npm versions ---'
-          node -v || true
-          npm -v || true
-          echo '--- PATH ---'
-          echo "$PATH"
-          echo '--- ls workspace root ---'
-          ls -la
-
       - run: npm install --legacy-peer-deps
 
       - run: npm run build
