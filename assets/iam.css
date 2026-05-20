@@ -1,0 +1,153 @@
+@font-face {
+    font-family: "Video";
+    src: url("https://loveisdancing.com/iam/fonts/Video.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Video";
+    src: url("https://loveisdancing.com/iam/fonts/Video-Cond-Light.otf") format("opentype");
+    font-weight: lighter;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Video";
+    src: url("https://loveisdancing.com/iam/fonts/Video-Cond-Med.otf") format("opentype");
+    font-weight: medium;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Video";
+    src: url("https://loveisdancing.com/iam/fonts/Video-Cond-Bold.otf") format("opentype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    font-family: Inter, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.iam-logo {
+    width: auto;
+    height: 60px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+@media (max-width: 600px) {
+    .iam-logo {
+        margin-bottom: 10px;
+    }
+}
+
+h1{
+    color: white;
+    font-size: 0rem;
+    text-align: center;
+    font-weight: normal;
+    margin-top: 20px;
+}
+
+p {
+    color:white;
+    font-family: Video, Inter, san-serif;
+    font-weight: lighter;
+    font-size: 1.1rem;
+    letter-spacing: 0.05rem;
+    padding: 0 50px 0 50px;
+    text-align: left;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    line-height: 125%;
+}
+
+@media (max-width: 600px) {
+    p {
+        padding: 0 40px 0 40px;
+        font-size: 1.2rem;
+    }
+}
+
+.caption {
+    color:white;
+    opacity: 0.6;
+    font-family: Doto, san-serif;
+    font-weight: bold;
+    font-size: 0.6rem;
+    letter-spacing: -0.01rem;
+    padding: 0 40px 0 40px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .caption {
+        font-size: 0.8rem;
+        padding-bottom: 20px
+    }
+}
+
+.columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    justify-self: center;
+    border: cyan 0px solid;
+    width: 100%;
+    max-width: 1000px;
+}
+
+@media (max-width: 768px) {
+    .columns {
+        grid-template-columns: 1fr;
+    }
+}
+
+.columns img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    display: block;
+    object-fit: fill;
+}
+
+.under {
+    padding: 0px 20px 0px 20px;
+    margin: 0;
+    max-width: 1000px;
+}
+
+@media (max-width: 768px) {
+    .under {
+        padding: 0 40px 0 40px;
+    }
+}
+
+a {
+    color: cyan;
+}
+
+.blank {
+    height: 50px;
+}
