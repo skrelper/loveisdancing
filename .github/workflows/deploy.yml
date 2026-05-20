@@ -7,14 +7,13 @@ on:
 permissions:
   contents: write
   pages: write
+  id-token: write
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          persist-credentials: true
 
       - uses: actions/setup-node@v4
         with:
@@ -24,17 +23,10 @@ jobs:
 
       - run: npm run build
 
-      - uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+      - uses: actions/configure-pages@v4
 
-      - name: Configure GitHub Pages source
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          curl -X PUT \
-            -H "Authorization: Bearer $GITHUB_TOKEN" \
-            -H "Accept: application/vnd.github+json" \
-            https://api.github.com/repos/$GITHUB_REPOSITORY/pages \
-            -d '{"source":{"branch":"gh-pages","path":"/"},"custom_domain":"loveisdancing.com"}'
+      - uses: actions/upload-pages-artifact@v1
+        with:
+          path: ./dist
+
+      - uses: actions/deploy-pages@v1
