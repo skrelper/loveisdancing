@@ -4,20 +4,35 @@ on:
   push:
     branches: [master]
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      
+        with:
+          persist-credentials: true
+
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      
+
+      - name: Debug runner environment
+        run: |
+          echo '--- node/npm versions ---'
+          node -v || true
+          npm -v || true
+          echo '--- PATH ---'
+          echo "$PATH"
+          echo '--- ls workspace root ---'
+          ls -la
+
       - run: npm install --legacy-peer-deps
-      
+
       - run: npm run build
-      
+
       - uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
