@@ -1,3 +1,9 @@
+:root {
+    --heart: rgb(234, 15,11);
+    --beat: rgb(0, 247, 246);
+    --pollen: rgb(230, 230, 230);
+}
+
 html, body {
     margin: 0;
     min-height: 100vh;
@@ -49,11 +55,11 @@ h1{
 }
 
 a{
-    color: cyan;
+    color: var(--beat);
 }
 
 a:hover {
-    color: rgb(88, 0, 0);
+    color: var(--pollen);
 }
 
 .container1{
@@ -94,12 +100,12 @@ form{
     box-sizing: border-box;
     padding: 10px 35px 10px 10px;
     font-size: 0.8rem;
-    border: rgb(88, 0, 0) solid 0px;
+    border: var(--beat) solid 0px;
 }
 
 #password:focus{
     outline: none;
-    border-color: cyan;
+    border-color: var(--pollen);
 }
 
 .star{
@@ -108,17 +114,18 @@ form{
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
-    color: rgb(88, 0, 0);
+    color: var(--beat);
 }
 
 ::placeholder{
-    color: rgb(88, 0, 0, 35%);
+    color: var(--beat);
+    opacity: 0.35;
     font-family: Doto, sans-serif;
     font-weight: bold;
 }
 
 input{
-    color: rgb(88, 0, 0)
+    color: var(--beat);
 }
 
 .input-container {
@@ -136,12 +143,12 @@ button.login{
     padding: 10px 5px;
     border: none;
     background: white;
-    color: rgb(88, 0, 0);
+    color: var(--beat);
     cursor: pointer;
 }
 
 button.login:hover {
-    color: cyan;
+    color: var(--pollen);
 }
 
 #promptmachine{
@@ -150,7 +157,7 @@ button.login:hover {
 }
 
 span:hover {
-    color: cyan;
+    color: var(--pollen);
 }
 
 @media (max-width: 800px) {

@@ -1,0 +1,53 @@
+body {
+    background-image: url('/content/images/HeartBeat_Ideation/Love_is_dancing/circle.gif');
+    font-family: "Inter Tight", sans-serif;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    color: var(--beat);
+    font-size: 1.8rem;
+    padding-bottom: 20px;
+}
+
+h3 {
+    font-family: Pixelify Sans, sans-serif;
+    color: var(--beat);
+}
+
+p {
+    color: var(--pollen);
+    font-size: 0.8rem;
+    letter-spacing: 0.03em;
+    opacity: 0.8;
+}
+
+.caption {
+    font-size: 0.7rem;
+    color: var(--pollen);
+    font-family: Pixelify Sans, sans-serif;
+    opacity: 0.6;
+}
+
+a {
+    text-decoration: underline;
+    color: var(--beat);
+}
+
+a:hover {
+    color: var(--beat);
+    filter: blur(0.5px);
+}
+
+audio {
+    padding-top: 5px;
+    max-width: 250px;
+    color: var(--heart);
+}

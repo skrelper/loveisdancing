@@ -26,6 +26,12 @@
   font-style: normal;
 }
 
+:root {
+    --heart: rgb(234, 15,11);
+    --beat: rgb(0, 247, 246);
+    --pollen: rgb(230, 230, 230);
+}
+
 html, body {
     margin: 0;
     padding: 0;
@@ -112,7 +118,7 @@ p {
     grid-template-columns: 1fr 1fr;
     justify-content: center;
     justify-self: center;
-    border: cyan 0px solid;
+    border: var(--beat) 0px solid;
     width: 100%;
     max-width: 1000px;
 }
@@ -145,7 +151,7 @@ p {
 }
 
 a {
-    color: cyan;
+    color: var(--beat);
 }
 
 .blank {

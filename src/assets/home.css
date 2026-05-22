@@ -1,36 +1,121 @@
+:root {
+    --heart: rgb(234, 15,11);
+    --beat: rgb(0, 247, 246);
+    --pollen: rgb(230, 230, 230);
+}
 
-body{
+body {
     background-color: white;
     font-family: "Inter Tight", sans-serif;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     min-height: 100vh;
     padding: 0;
-    overflow: hidden;
+    margin: 0;
 }
 
-#promptmachine{
-    font-family: Pixelify Sans, sans-serif;
+.container1 {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-a {
-    color: cyan;
+.center-wrap {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.subtext {
-    line-height: 1rem;
-    margin-bottom: 0;
-    margin-top: 0;
+.main-icons {
+    display: flex;
+    flex-direction: row;
+    gap: 65px;
+    padding-top: 20px;
+}
+
+.container1 img {
+    width: auto;
+    height: 110px;
+    display: block;
+    transition: transform 0.1s, filter 0.1s;
+}
+
+.container1 img:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 15px var(--pollen));
+    animation: pulse 1.8s infinite;
+}
+
+.container1 img:hover {
+    filter: saturation(0%);
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    10% {
+        transform: scale(1);
+    }
+
+    25% {
+        transform: scale(1.1);
+    }
+
+    40% {
+        transform: scale(1);
+    }
+
+    60% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.icon {
+    width: auto;
+    height: auto;
+    display: block;
+}
+
+#sitemap {
+    font-size: 1rem;
+    color: var(--pollen);
+    margin-bottom: 40px;
+    font-family: "Pixelify Sans", sans-serif;
+    text-decoration: underline;
+/*     border: black solid 1px; */
+    width: 80px;
+    align-self: center;
+}
+
+#sitemap:hover {
+    color: var(--beat);
+    cursor: pointer;
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--beat);
+    margin-top: 20px;
+    color: var(--beat);
 }
 
 @media (max-width: 800px) {
-    .container1{
-        width: 80%;
+
+    .main-icons {
+        flex-direction: column;
     }
-    #promptmachine{
-        font-size: 1.3rem;
+
+    #files {
+        transform: translateX(-12px);
     }
+
 }

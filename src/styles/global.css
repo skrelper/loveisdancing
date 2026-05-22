@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    --heart: rgb(234, 15,11);
+    --beat: rgb(0, 247, 246);
+    --pollen: rgb(230, 230, 230);
+}

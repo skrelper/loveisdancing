@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 555.2 459.35">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #00f7f6;
+      }
+
+      .cls-2 {
+        fill: #ea0f0b;
+      }
+
+      .cls-3 {
+        fill: #e6e6e6;
+        opacity: .5;
+      }
+    </style>
+  </defs>
+  <g id="Layer_2-2" data-name="Layer 2">
+    <g>
+      <path class="cls-1" d="M395.58,345.96V21.23H89.25v251.68c-3.27-.41-6.59-.65-9.97-.65-43.78,0-79.28,35.49-79.28,79.28s35.49,79.28,79.28,79.28,79.28-35.49,79.28-79.28V90.54h167.73v182.35c-3.2-.39-6.45-.62-9.76-.62-43.78,0-79.28,35.49-79.28,79.28s35.49,79.28,79.28,79.28,79.28-35.49,79.28-79.28c0-1.88-.09-3.74-.22-5.58Z"/>
+      <polygon class="cls-2" points="272.29 221.19 202.99 221.19 204.4 62.23 273.7 62.23 272.29 221.19"/>
+      <circle class="cls-2" cx="475.92" cy="141.51" r="79.28"/>
+      <circle class="cls-2" cx="475.92" cy="351.55" r="79.28"/>
+    </g>
+  </g>
+  <g id="Layer_4" data-name="Layer 4">
+    <rect class="cls-3" x="118.4" width="141.71" height="141.71"/>
+    <rect class="cls-3" x="370.69" y="94.18" width="141.71" height="141.71"/>
+    <rect class="cls-3" x="26.97" y="62.23" width="141.71" height="141.71" rx="70.86" ry="70.86"/>
+    <rect class="cls-3" x="324.94" y="167.37" width="141.71" height="141.71" rx="70.86" ry="70.86"/>
+    <rect class="cls-3" x="221.32" y="317.64" width="141.71" height="141.71" rx="70.86" ry="70.86"/>
+  </g>
+</svg>

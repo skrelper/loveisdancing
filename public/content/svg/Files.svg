@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 638.48 472.55">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #00f7f6;
+      }
+
+      .cls-2 {
+        fill: #ea0f0b;
+      }
+
+      .cls-3 {
+        fill: #e6e6e6;
+        opacity: .5;
+      }
+    </style>
+  </defs>
+  <g id="Files">
+    <g>
+      <g>
+        <path class="cls-2" d="M62.93,189.12h555.08v-68.18c0-38.31-31.06-69.37-69.37-69.37h-272.45v-17.14h-144.62c-37.92,0-68.65,30.74-68.65,68.65v86.04Z"/>
+        <rect class="cls-1" x="62.93" y="105.12" width="555.08" height="339.49" rx="81.93" ry="81.93"/>
+      </g>
+      <g>
+        <path class="cls-2" d="M265.72,223.77c-50.84-50.84-111.53,9.85-60.69,60.69l60.69,60.69,60.69-60.69c50.84-50.84-9.85-111.53-60.69-60.69Z"/>
+        <rect class="cls-2" x="355.26" y="208.94" width="131.85" height="131.85"/>
+      </g>
+    </g>
+  </g>
+  <g id="Layer_4" data-name="Layer 4">
+    <rect class="cls-3" x="496.76" y="23.86" width="141.71" height="141.71"/>
+    <rect class="cls-3" y="189.12" width="141.71" height="141.71"/>
+    <rect class="cls-3" x="376.38" y="330.84" width="141.71" height="141.71"/>
+    <rect class="cls-3" x="196.57" y="0" width="141.71" height="141.71" rx="70.86" ry="70.86"/>
+    <rect class="cls-3" x="432.76" y="269.93" width="141.71" height="141.71" rx="70.86" ry="70.86"/>
+  </g>
+</svg>

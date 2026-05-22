@@ -1,3 +1,9 @@
+:root {
+    --heart: rgb(234, 15,11);
+    --beat: rgb(0, 247, 246);
+    --pollen: rgb(230, 230, 230);
+}
+
 body{
     background-color: black;
 }
@@ -37,7 +43,7 @@ body{
     font-size: 1.5rem;
     text-align: left;
     font-family: Pixelify Sans, sans-serif;
-    padding-top: 18px;
+    padding-top: 0px;
 }
 
 .prompt{
