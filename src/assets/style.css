@@ -219,7 +219,7 @@ span:hover {
         padding: 10px 20px;
         border: none;
         background: white;
-        color: black;
+        color: var(--beat);
         cursor: pointer;
     }
 }

@@ -6,6 +6,9 @@
 
 body {
     background-color: white;
+    background-image: url("/content/images/dead-pixels/whitebg3.jpg");
+    background-size: cover;
+    background-position: center;
     font-family: "Inter Tight", sans-serif;
     text-align: center;
     min-height: 100vh;
@@ -31,7 +34,7 @@ body {
     display: flex;
     flex-direction: row;
     gap: 65px;
-    padding-top: 20px;
+    padding-top: 40px;
 }
 
 .container1 img {
@@ -86,7 +89,7 @@ body {
 #sitemap {
     font-size: 1rem;
     color: var(--pollen);
-    margin-bottom: 40px;
+    margin-bottom: 70px;
     font-family: "Pixelify Sans", sans-serif;
     text-decoration: underline;
 /*     border: black solid 1px; */
@@ -114,8 +117,8 @@ body {
         flex-direction: column;
     }
 
-    #files {
+/*     #files {
         transform: translateX(-12px);
-    }
+    } */
 
 }
