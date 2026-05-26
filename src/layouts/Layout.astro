@@ -34,6 +34,9 @@ const { title, description, image, url } = Astro.props; //
     <meta name="description" content={description ?? "Explore Max Bass."} />
     <meta property="og:image" content={image ?? "https://loveisdancing.com/content/images/everything.png"} />
     <meta property="og:url" content={url}>
+
+    <slot name="head" />
+
   </head>
   <body>
     <slot />

@@ -46,12 +46,16 @@ body {
 
 .container1 img:hover {
     transform: scale(1.2);
-    filter: drop-shadow(0 0 15px var(--pollen));
+    filter: drop-shadow(0 0 15px rgb(230, 230, 230, 0.3));
     animation: pulse 1.8s infinite;
 }
 
 .container1 img:hover {
     filter: saturation(0%);
+}
+
+audio {
+    display:none;
 }
 
 @keyframes pulse {

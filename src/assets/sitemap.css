@@ -1,18 +1,36 @@
+:root {
+    --heart: rgb(234, 15,11);
+    --beat: rgb(0, 247, 246);
+    --pollen: rgb(230, 230, 230);
+}
+
 body {
-    min-height: 100vh;
-    max-width: 80vw;
-    align-self: center;
-    justify-self: center;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.sitemap {
+    max-width: 95vw;
+    min-height: 80vh;
+    margin: 0 auto;
+    margin-top: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0;
-    font-family: "Jersey 10", serif;
+    flex-direction: column;
+    border: 0px black dashed;
+    background-image: url("/content/svg/title.svg");
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: top;
 }
 
 h1 {
     color: var(--beat);
-    font-size: 1.5rem;
+    font-size: 1rem;
     filter: drop-shadow(0 0 10px var(--pollen));
     text-align: center;
     line-height: 90%;
@@ -26,4 +44,66 @@ a {
 a:hover {
     color: var(--heart);
     filter: blur(0.5px);
+}
+
+h2 {
+    font-family: Pixelify Sans, sans-serif;
+    color: var(--beat);
+    font-size: 1.4rem;
+  /*   text-shadow: white 0px 0 15px; */
+    /* -webkit-text-stroke: 0.5px var(--beat); */
+    z-index: 10;
+    padding-bottom: 16px;
+}
+
+h2:hover {
+/*     text-shadow: white 0px 0 15px;
+    -webkit-text-stroke: 0.5px var(--beat); */
+}
+
+li {
+    font-family: Pixelify Sans, sans-serif;
+    color: var(--beat);
+    font-size: 1.4rem;
+    line-height: 150%;
+  /*   text-shadow: white 0px 0 15px; */
+    /* -webkit-text-stroke: 0.5px var(--beat); */
+    z-index: 10;
+    padding-left: 30px;
+}
+
+.map-column {
+    border: 0px black solid;
+    flex: 1;
+    max-width: 300px;
+    height: auto;
+    margin-top: 50px;
+}
+
+p {
+    font-family: Doto, sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    padding-left: 44px;
+    padding-top: 0px;
+    line-height: 94%;
+    letter-spacing: -0.5px;
+    color: var(--pollen);
+    margin-bottom: 12px;
+}
+
+.map-columns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 20vw;
+}
+
+@media (max-width: 800px) {
+
+.map-columns {
+    flex-direction: column;
+}
+
 }

@@ -19,8 +19,20 @@ import '../assets/home.css';
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Jacquard+12+Charted&family=Jersey+10&family=Micro+5+Charted&family=Pixelify+Sans:wght@400..700&family=Rubik+Broken+Fax&family=Silkscreen:wght@400;700&family=Syne+Mono&display=swap" rel="stylesheet">
+
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wv5ok28jme");
+    </script>
+
 </head>
+
 <body>
+  <audio id="hover-audio" src="/content/audio/fx/dance_chords.ogg"></audio>
+  <audio id="hover-audio2" src="/content/audio/fx/lid-intro-cut.ogg"></audio>
   <div class="container1">
     <div class="center-wrap">
       <div class="main-icons">
@@ -40,5 +52,37 @@ import '../assets/home.css';
 
     <p id="sitemap"><a href="/sitemap">Sitemap</a></p>
   </div>
+  <script>
+    // @ts-nocheck
+  const images = document.querySelectorAll("img");
+  const audio = document.getElementById("hover-audio")!;
+  const audiocut = document.getElementById("hover-audio2")!;
+  const text = document.querySelectorAll("p");
+
+audio.addEventListener("ended", () => {
+  audio.currentTime = 0;
+  audio.play();
+});
+
+audiocut.addEventListener("ended", () => {
+  audiocut.currentTime = 0;
+  audiocut.play();
+});
+
+  images.forEach(img => {
+    img.addEventListener("mouseover", () => audio.play());
+    img.addEventListener("mouseleave", () => audio.pause());
+  });
+
+  text.forEach(p => {
+    p.addEventListener("mouseover", () => audiocut.play());
+    p.addEventListener("mouseleave", () => audiocut.pause());
+  })
+
+  document.body.addEventListener("click", () => {
+  audio.play().then(() => audio.pause());
+}, { once: true });
+
+</script>
 </body>
 </html>

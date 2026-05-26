@@ -4,6 +4,138 @@ import '../assets/sitemap.css'
 ---
 
 <layout title="Sitemap" description="A sitemap of loveisdancing.com." url="https://loveisdancing.com/sitemap">
-    <h1>This is the sitemap and I'm too bored to make it look pretty rn but <a href="https://Loveisdancing.com/iam">here's a link to my iam... rundown</a></h1>
+
+<head slot="head">
+    <script type="text/javascript">
+// <![CDATA[
+var colour="var(--beat)"; //  colours of drops
+var border="var(--beat)"; // colour of border
+var speed=150; // speed of animation, lower is faster
+var size=7; // size of blocks
+var drops=80; // number of raindrops
+
+/***************************\
+* Block Rain Graphic Effect *
+*(c)2005-12 mf2fm web-design*
+*  http://www.mf2fm.com/rv  *
+* DON'T EDIT BELOW THIS BOX *
+\***************************/
+
+var swide, shigh;
+var blox=new Array();
+var blok=new Array();
+var boddie;
+
+window.onload=function() { if (document.getElementById) {
+  var i, d, s;
+  boddie=document.createElement("div");
+  s=boddie.style;
+  s.position="fixed";
+  s.top="0px";
+  s.left="0px";
+  s.width="1px";
+  s.height="1px";
+  s.overflow="visible";
+  s.backgroundColor="transparent";
+  document.body.appendChild(boddie);
+  set_width();
+  for (i=0; i<drops; i++) {
+    d=document.createElement("div");
+    s=d.style;
+    s.width=size+"px";
+    s.height=size+"px";
+    s.overflow="hidden";
+    s.position="absolute";
+    s.visibility="hidden";
+    s.backgroundColor=colour;
+	s.border="1px solid "+border;
+	blox[i]=-1;
+    blok[i]=d;
+	boddie.appendChild(blok[i]);
+  }
+  size+=4;
+  mainblock(0);
+}}
+
+function mainblock(r) {
+  var t, l;
+  t=4+size*Math.floor(Math.random()*(shigh-size)/size);
+  l=4+size*Math.floor(Math.random()*(swide-size)/size);
+  blok[r].style.left=l+"px";
+  blok[r].style.top=t+"px";
+  blox[r]=11;
+  blok[r].style.visibility="visible";
+  subblock(r);
+  setTimeout("mainblock("+(++r%drops)+")", speed);
+}
+
+function subblock(r) {
+    setTimeout(() => {
+        blok[r].style.visibility = "hidden";
+    }, speed * 2);
+}
+
+window.onresize=set_width;
+function set_width() {
+  var sw_min=999999;
+  var sh_min=999999;
+  if (document.documentElement && document.documentElement.clientWidth) {
+    if (document.documentElement.clientWidth>0) sw_min=document.documentElement.clientWidth;
+    if (document.documentElement.clientHeight>0) sh_min=document.documentElement.clientHeight;
+  }
+  if (typeof(self.innerWidth)!="undefined" && self.innerWidth) {
+    if (self.innerWidth>0 && self.innerWidth<sw_min) sw_min=self.innerWidth;
+    if (self.innerHeight>0 && self.innerHeight<sh_min) sh_min=self.innerHeight;
+  }
+  if (document.body.clientWidth) {
+    if (document.body.clientWidth>0 && document.body.clientWidth<sw_min) sw_min=document.body.clientWidth;
+    if (document.body.clientHeight>0 && document.body.clientHeight<sh_min) sh_min=document.body.clientHeight;
+  }
+  if (sw_min==999999 || sh_min==999999) {
+    sw_min=800;
+    sh_min=600;
+  }
+  swide=sw_min;
+  shigh=sh_min;
+}
+// ]]>
+</script>
+</head>
+
+    <div class="sitemap">
+
+       <!--  <h1>This is the sitemap and I'm too bored to make it look pretty rn but <a href="https://Loveisdancing.com/iam">here's a link to my iam... rundown</a></h1>
+        <br> -->
+
+        <!-- <img class="Logo" src="/content/svg/title.svg"> -->
+        <div class="map-columns">
+
+          <div class="map-column">
+              <h2><a href="https://loveisdancing.com/home">/home</a></h2>
+              <!-- <ul>
+                <li>/music</li>
+                  <p>Streaming links, demos, unreleased snippets, lyrics</p>
+              </ul> -->
+          </div>
+
+          <div class="map-column">
+              <h2><a href="https://loveisdancing.com/files">/files</a></h2>
+              <ul>
+                <li><a href="https://loveisdancing.com/music">/music</a></li>
+                  <p>Streaming links, demos, unreleased snippets, lyrics</p>
+                <li>/store</li>
+                  <p>Merch, physicals, digitals</p>
+                <li><a href="https://loveisdancing.com/gallery">/gallery</a></li>
+                  <p>Pictures, videos, dead pixels</p>
+                <li>/blog</li>
+                  <p>Journals, recommendationns, updates</p>
+                <li>/archive</li>
+                  <p>Old stuff, trash, design work, baby pics</p>
+              </ul>
+          </div>
+
+        </div> 
+        
+    </div>
 
 </layout>

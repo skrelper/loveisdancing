@@ -19,6 +19,187 @@ import '../../assets/iam.css';
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Jacquard+12+Charted&family=Jersey+10&family=Micro+5+Charted&family=Pixelify+Sans:wght@400..700&family=Rubik+Broken+Fax&family=Silkscreen:wght@400;700&family=Syne+Mono&display=swap" rel="stylesheet">
+
+    <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wv5ok28jme");
+    </script>
+
+<script type="text/javascript">
+// <![CDATA[
+var bits=20; // how many bits
+var speed=30; // how fast - smaller is faster
+var bangs=4; // how many can be launched simultaneously (note that using too many can slow the script down)
+var colours=new Array("dimgray", "var(--beat)", "lime", "darkorange", "magenta", "black", "white"); 
+
+/****************************
+*      Fireworks Effect     *
+*(c)2004-14 mf2fm web-design*
+*  http://www.mf2fm.com/rv  *
+* DON'T EDIT BELOW THIS BOX *
+****************************/
+
+var bangheight=new Array();
+var intensity=new Array();
+var colour=new Array();
+var Xpos=new Array();
+var Ypos=new Array();
+var dX=new Array();
+var dY=new Array();
+var stars=new Array();
+var decay=new Array();
+var swide=800;
+var shigh=600;
+var boddie;
+
+if (typeof('addRVLoadEvent')!='function') function addRVLoadEvent(funky) {
+  var oldonload=window.onload;
+  if (typeof(oldonload)!='function') window.onload=funky;
+  else window.onload=function() {
+    if (oldonload) oldonload();
+    funky();
+  }
+}
+
+addRVLoadEvent(light_blue_touchpaper);
+
+function light_blue_touchpaper() { if (document.getElementById) {
+  var i;
+  boddie=document.createElement("div");
+  boddie.style.position="fixed";
+  boddie.style.top="0px";
+  boddie.style.left="0px";
+  boddie.style.overflow="visible";
+  boddie.style.width="1px";
+  boddie.style.height="1px";
+  boddie.style.backgroundColor="transparent";
+  document.body.appendChild(boddie);
+  set_width();
+  for (i=0; i<bangs; i++) {
+    write_fire(i);
+    launch(i);
+    setInterval('stepthrough('+i+')', speed);
+  }
+}}
+
+function write_fire(N) {
+  var i, rlef, rdow;
+  stars[N+'r'] = createDiv(3);
+  stars[N+'r'].style.backgroundColor = colours[Math.floor(Math.random() * colours.length)];
+  boddie.appendChild(stars[N+'r']);
+
+  for (i=bits*N; i<bits+bits*N; i++) {
+    var size = 0.5 + Math.random() * 4;
+    stars[i] = createDiv(size);
+    stars[i].baseSize = size;
+
+    boddie.appendChild(stars[i]);
+  }
+}
+
+function createDiv(size) {
+  var div = document.createElement("div");
+  div.style.position = "absolute";
+  div.style.width = size + "px";
+  div.style.height = size + "px";
+  div.style.backgroundColor = "var(--beat)";
+  return div;
+}
+
+function launch(N) {
+  colour[N]=Math.floor(Math.random()*colours.length);
+  Xpos[N+"r"]=swide*0.5;
+  Ypos[N+"r"]=shigh-10;
+  bangheight[N]=Math.round((0.5+Math.random())*shigh*0.4);
+  dX[N+"r"]=(Math.random()-0.5)*swide/bangheight[N];
+}
+
+function bang(N) {
+  var i, Z, A=0;
+  for (i=bits*N; i<bits+bits*N; i++) { 
+    Z=stars[i].style;
+    Z.left=Xpos[i]+"px";
+    Z.top=Ypos[i]+"px";
+  var life = decay[i] / 50;  // 1 → 0 as it dies
+
+Z.opacity = life; // Fade out
+
+var newSize = stars[i].baseSize * life; // shrink and slow down
+Z.width = newSize + "px";
+Z.height = newSize + "px";
+dX[i] *= 0.97;
+dY[i] *= 0.97;
+
+    if (decay[i]) decay[i]--;
+    else A++;
+    Xpos[i]+=dX[i];
+    Ypos[i]+=(dY[i]+=0.2/intensity[N]);
+
+  }
+  if (A!=bits) setTimeout("bang("+N+")", speed);
+}
+
+function stepthrough(N) { 
+  var i, M, Z;
+  var oldx=Xpos[N+"r"];
+  var oldy=Ypos[N+"r"];
+  Xpos[N+"r"]+=dX[N+"r"];
+  Ypos[N+"r"]-=4;
+  if (Ypos[N+"r"]<bangheight[N]) {
+    M=Math.floor(Math.random()*3*colours.length);
+    intensity[N]=5+Math.random()*4;
+    for (i=N*bits; i<bits+bits*N; i++) {
+    Xpos[i]=Xpos[N+"r"];
+    Ypos[i]=Ypos[N+"r"];
+      
+    var spread = 0.4;
+        dY[i] = (Math.random() - 0.5) * intensity[N] * spread;
+        dX[i] = (Math.random() - 0.5) * (intensity[N] - Math.abs(dY[i])) * spread;
+
+    decay[i]=70+Math.floor(Math.random()*3);
+    Z=stars[i];
+    if (M < colours.length) Z.style.backgroundColor = colours[i % 2 ? colour[N] : M];
+    else if (M < 2 * colours.length) Z.style.backgroundColor = colours[colour[N]];
+    else Z.style.backgroundColor = colours[i % colours.length];
+    Z.style.fontSize="13px";
+    Z.style.visibility="visible";
+    }
+    bang(N);
+    launch(N);
+  }
+  stars[N+"r"].style.left=oldx+"px";
+  stars[N+"r"].style.top=oldy+"px";
+} 
+
+window.onresize=set_width;
+function set_width() {
+  var sw_min=999999;
+  var sh_min=999999;
+  if (document.documentElement && document.documentElement.clientWidth) {
+    if (document.documentElement.clientWidth>0) sw_min=document.documentElement.clientWidth;
+    if (document.documentElement.clientHeight>0) sh_min=document.documentElement.clientHeight;
+  }
+  if (typeof(self.innerWidth)!="undefined" && self.innerWidth) {
+    if (self.innerWidth>0 && self.innerWidth<sw_min) sw_min=self.innerWidth;
+    if (self.innerHeight>0 && self.innerHeight<sh_min) sh_min=self.innerHeight;
+  }
+  if (document.body.clientWidth) {
+    if (document.body.clientWidth>0 && document.body.clientWidth<sw_min) sw_min=document.body.clientWidth;
+    if (document.body.clientHeight>0 && document.body.clientHeight<sh_min) sh_min=document.body.clientHeight;
+  }
+  if (sw_min==999999 || sh_min==999999) {
+    sw_min=800;
+    sh_min=600;
+  }
+  swide=sw_min;
+  shigh=sh_min;
+}
+// ]]>
+</script>
+
 </head>
 <body>
     <h1>iam...</h1>
