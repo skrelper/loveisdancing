@@ -1,12 +1,16 @@
 body {
     background-image: url('/content/images/HeartBeat_Ideation/Love_is_dancing/circle.gif');
+    background-size: cover;
     font-family: "Inter Tight", sans-serif;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    height: calc(var(--vh) * 100);
+    min-width: 100%;
+    width: 100%;
+    overflow-x: hidden;
     padding: 0;
     margin: 0;
 }

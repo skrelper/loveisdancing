@@ -6,6 +6,10 @@
 
 body{
     background-color: black;
+    height: calc(var(--vh) * 100);
+    min-width: 100%;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 .container-prompts{

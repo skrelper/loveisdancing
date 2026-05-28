@@ -7,25 +7,29 @@
 body {
     margin: 0;
     padding: 0;
-    width: 100vw;
+    min-width: 100%;
+    width: 100%;
+    overflow-x: hidden;
     height: 100vh;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
 }
 
 .sitemap {
     max-width: 95vw;
     min-height: 80vh;
     margin: 0 auto;
-    margin-top: 150px;
+    /* margin-top: 150px; */
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     border: 0px black dashed;
-    background-image: url("/content/svg/title.svg");
+    /* background-image: url("/content/svg/title.svg");
     background-size: 50%;
     background-repeat: no-repeat;
-    background-position: top;
+    background-position: top; */
 }
 
 h1 {
@@ -75,9 +79,10 @@ li {
 .map-column {
     border: 0px black solid;
     flex: 1;
-    max-width: 300px;
+    max-width: 400px;
+    min-width: 300px;
     height: auto;
-    margin-top: 50px;
+    margin-top: 0px;
 }
 
 p {

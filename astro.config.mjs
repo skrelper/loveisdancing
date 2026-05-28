@@ -10,6 +10,7 @@ export default defineConfig({
     '/gallery': '/files/gallery',
     '/blog': '/files/blog',
     '/store': '/files/store',
-    '/archive': '/files/archive'
+    '/archive': '/files/archive',
+    '/heartbeatideation': '/ben',
   }
 });
