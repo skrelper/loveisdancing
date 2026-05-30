@@ -7,9 +7,8 @@
 body {
     margin: 0;
     padding: 0;
-    min-width: 100%;
     width: 100%;
-    min-height: 100vh;
+    height: calc(var(--vh) * 100);
     display: flex;
     justify-content: center;
 }
@@ -90,20 +89,26 @@ ul p {
     padding: 0 20vw;
 }
 
-/* .shadow-host {
+.shadow-host {
     position: fixed;
     top: 0;
     left: 0;
     width: 0;
     height: 0;
     pointer-events: none;
-} */
+}
 
 @media (max-width: 800px) {
 
-.map-columns {
-    flex-direction: column;
-}
+  .map-columns {
+      flex-direction: column;
+      padding: 0;
+  }
+
+  .map-column {
+      min-width: 0;
+      max-width: 100%;
+  }
 
 h2 {
     font-size: 1.7rem;

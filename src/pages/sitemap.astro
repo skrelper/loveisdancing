@@ -5,8 +5,8 @@ import '../assets/sitemap.css'
 
 <layout title="Sitemap" description="A sitemap of loveisdancing.com." url="https://loveisdancing.com/sitemap">
 
-<!-- <head slot="head">
-    <script type="text/javascript">
+<head slot="head">
+    <!-- <script type="text/javascript">
 // <![CDATA[
 var colour="var(--beat)"; //  colours of drops
 var border="var(--beat)"; // colour of border
@@ -118,8 +118,14 @@ function set_width() {
   shigh=sh_min;
 }
 // ]]>
+</script> -->
+<script is:inline>
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
 </script>
-</head> -->
+
+
+</head>
 
     <div class="sitemap">
 
