@@ -35,42 +35,44 @@ requestAnimationFrame(() => {
 });
 
 function startRain() {
-
   if (!document.getElementById) return;
-  var i, d, s;
-  boddie=document.createElement("div");
-  s=boddie.style;
-  s.position="fixed";
-  s.top="1px";
-  s.left="1px";
-  s.width="1px";
-  s.height="1px";
-  s.overflow="visible";
-  s.backgroundColor="transparent";
-  
-const host = document.createElement("div");
-const shadow = host.attachShadow({ mode: "open" });
-document.body.appendChild(host);
 
-boddie = document.createElement("div");
-shadow.appendChild(boddie);
+  const host = document.createElement("div");
+  host.className = "shadow-host";
+  const shadow = host.attachShadow({ mode: "open" });
+  document.body.appendChild(host);
+
+  boddie = document.createElement("div");
+  const s = boddie.style;
+  s.position = "fixed";
+  s.top = "1px";
+  s.left = "1px";
+  s.width = "1px";
+  s.height = "1px";
+  s.overflow = "visible";
+  s.backgroundColor = "transparent";
+
+  shadow.appendChild(boddie);
 
   set_width();
-  for (i=0; i<drops; i++) {
-    d=document.createElement("div");
-    s=d.style;
-    s.width=size+"px";
-    s.height=size+"px";
-    s.overflow="hidden";
-    s.position="absolute";
-    s.visibility="hidden";
-    s.backgroundColor=colour;
-	s.border="1px solid "+border;
-	blox[i]=-1;
-    blok[i]=d;
-	boddie.appendChild(blok[i]);
+
+  for (let i = 0; i < drops; i++) {
+    const d = document.createElement("div");
+    const ds = d.style;
+    ds.width = size + "px";
+    ds.height = size + "px";
+    ds.overflow = "hidden";
+    ds.position = "absolute";
+    ds.visibility = "hidden";
+    ds.backgroundColor = colour;
+    ds.border = "1px solid " + border;
+
+    blox[i] = -1;
+    blok[i] = d;
+    boddie.appendChild(d);
   }
-  size+=4;
+
+  size += 4;
   mainblock(0);
 }
 
@@ -121,10 +123,6 @@ function set_width() {
 
     <div class="sitemap">
 
-       <!--  <h1>This is the sitemap and I'm too bored to make it look pretty rn but <a href="https://Loveisdancing.com/iam">here's a link to my iam... rundown</a></h1>
-        <br> -->
-
-        <!-- <img class="Logo" src="/content/svg/title.svg"> -->
         <div class="map-columns">
 
           <div class="map-column">
