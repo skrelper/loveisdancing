@@ -1,9 +1,9 @@
 ---
-import layout from '../layouts/Layout.astro';
-import '../assets/sitemap.css'
+import Layout from '../layouts/Layout.astro';
+/* import '../assets/sitemap.css' */
 ---
 
-<layout title="Sitemap" description="A sitemap of loveisdancing.com." url="https://loveisdancing.com/sitemap">
+<Layout title="Sitemap" description="A sitemap of loveisdancing.com." url="https://loveisdancing.com/sitemap">
 
 <head slot="head">
     <!-- <script type="text/javascript">
@@ -124,8 +124,19 @@ let vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty('--vh', `${vh}px`);
 </script>
 
+<style>
+  body {
+    font-family: "Pixelify Sans", system-ui, sans-serif !important;
+    font-size: 24px;
+  }
+</style>
 
 </head>
+
+<p style="font-size: 32px; font-weight: 400;">
+  FONT TEST — THIS SHOULD BE PIXELIFY SANS
+</p>
+
 
     <div class="sitemap">
 
@@ -159,4 +170,4 @@ document.documentElement.style.setProperty('--vh', `${vh}px`);
         
     </div>
 
-</layout>
+</Layout>
