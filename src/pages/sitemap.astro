@@ -26,11 +26,13 @@ var blox=new Array();
 var blok=new Array();
 var boddie;
 
-window.onload = () => {
-  setTimeout(() => {
-    startRain();
-  }, 150);
-};
+requestAnimationFrame(() => {
+  requestAnimationFrame(() => {
+    setTimeout(() => {
+      startRain();
+    }, 50);
+  });
+});
 
 function startRain() {
 
@@ -45,7 +47,14 @@ function startRain() {
   s.height="1px";
   s.overflow="visible";
   s.backgroundColor="transparent";
-  document.documentElement.appendChild(boddie);
+  
+const host = document.createElement("div");
+const shadow = host.attachShadow({ mode: "open" });
+document.body.appendChild(host);
+
+boddie = document.createElement("div");
+shadow.appendChild(boddie);
+
   set_width();
   for (i=0; i<drops; i++) {
     d=document.createElement("div");
