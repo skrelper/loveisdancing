@@ -26,18 +26,26 @@ var blox=new Array();
 var blok=new Array();
 var boddie;
 
-window.onload=function() { if (document.getElementById) {
+window.onload = () => {
+  setTimeout(() => {
+    startRain();
+  }, 150);
+};
+
+function startRain() {
+
+  if (!document.getElementById) return;
   var i, d, s;
   boddie=document.createElement("div");
   s=boddie.style;
   s.position="fixed";
-  s.top="0px";
-  s.left="0px";
+  s.top="1px";
+  s.left="1px";
   s.width="1px";
   s.height="1px";
   s.overflow="visible";
   s.backgroundColor="transparent";
-  document.body.appendChild(boddie);
+  document.documentElement.appendChild(boddie);
   set_width();
   for (i=0; i<drops; i++) {
     d=document.createElement("div");
@@ -55,7 +63,7 @@ window.onload=function() { if (document.getElementById) {
   }
   size+=4;
   mainblock(0);
-}}
+}
 
 function mainblock(r) {
   var t, l;

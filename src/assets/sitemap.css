@@ -9,9 +9,7 @@ body {
     padding: 0;
     min-width: 100%;
     width: 100%;
-    overflow-x: hidden;
-    height: 100vh;
-    overflow: hidden;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
 }
