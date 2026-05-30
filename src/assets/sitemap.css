@@ -90,14 +90,14 @@ ul p {
     padding: 0 20vw;
 }
 
-.shadow-host {
+/* .shadow-host {
     position: fixed;
     top: 0;
     left: 0;
     width: 0;
     height: 0;
     pointer-events: none;
-}
+} */
 
 @media (max-width: 800px) {
 
