@@ -85,8 +85,8 @@ li {
     margin-top: 0px;
 }
 
-p {
-    font-family: Doto, sans-serif;
+ul p {
+    font-family: Doto, sans-serif !important;
     font-weight: 600;
     font-size: 1rem;
     padding-left: 44px;
