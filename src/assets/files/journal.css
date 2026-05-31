@@ -84,16 +84,49 @@ body {
     margin-top: 20px;
 }
 
-.blogimg {
+/* .blogimg {
     height: clamp(300px, 40vh, 700px);
     width: 100vw;
-    object-fit: cover;
-    object-position: center;
+    background-image: url("https://Loveisdancing.com/content/images/dead-pixels/snarl.jpg");
+    background-repeat: round;
     display: block;
     border: var(--beat) 1px solid;
     margin-top: 6px;
     justify-self:center;
+} */
+
+.carousel::-webkit-scrollbar {
+    display: none;
 }
+
+.carousel {
+    overflow: hidden;
+    width: 100%;
+}
+
+.track {
+    display: flex;
+    flex-shrink: 0;
+    width: max-content;
+    animation: spin 60s linear infinite;
+}
+
+.group {
+    display: flex;
+    flex-shrink: 0;
+    width: max-content;
+}
+
+.card img {
+    display: block;
+    height: clamp(300px, 40vh, 700px);
+}
+
+@keyframes spin {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}
+
 
 .fullwidth {
     width: 100vw;
@@ -127,12 +160,13 @@ h3 {
 .caption {
     font-family: Doto, sans-serif;
     font-weight: 400;
-    font-size: 0.7rem;
-    margin-bottom: 20px;
+    font-size: 0.6rem;
+    margin-bottom: 30px;
     margin-top: 10px;
     width: 60vw;
     height: auto;
-    padding: 0 26px;
+    padding: 0 10px;
+    line-height: 98%;
 }
 
 p {
@@ -146,7 +180,7 @@ p {
     width: 60vw;
     height: auto;
     margin-bottom: 18px;
-    padding: 0 26px;
+    padding: 0 10px;
     line-height: 120%;
     word-spacing: clamp(-4px, -3vw, -1px);
 }

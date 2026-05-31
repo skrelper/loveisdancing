@@ -8,13 +8,37 @@ import '../../../assets/files/journal.css';
 
     <Blog
     
-    date="260529"
+    date="260530"
     title="Love is fucking dancing and it's music and dance is sex"
-    caption="Shoutout Matt for the jacket. Also Jarrett or Adham for the video... I don't remember who."
+    caption="Shoutout Matt for the jacket."
     
     >
     
-    <img src="/content/images/HeartBeat_Ideation/Love_is_dancing/circle.gif" slot="image" class="blogimg">
+<!--     <div slot="image" class="blogimg"></div> -->
+<!--     <img src="/content/images/dead-pixels/snarl.jpg" slot="image" class="blogimg"> -->
+
+    <div slot="image" class="carousel">
+        <div class="track">
+            <div class="group">
+                <div class="card"><img src="/content/images/dead-pixels/snarl.jpg"></div>
+                <div class="card"><img src="/content/images/dead-pixels/snarl.jpg"></div>
+                <div class="card"><img src="/content/images/dead-pixels/snarl.jpg"></div>
+                <div class="card"><img src="/content/images/dead-pixels/snarl.jpg"></div>
+                <div class="card"><img src="/content/images/dead-pixels/snarl.jpg"></div>
+                <div class="card"><img src="/content/images/dead-pixels/snarl.jpg"></div>
+                <div class="card"><img src="/content/images/dead-pixels/snarl.jpg"></div>
+            </div>
+            <div aria-hidden class="group">
+                <div class="card"><img src="/content/images/dead-pixels/snarl.jpg"></div>
+                <div class="card"><img src="/content/images/dead-pixels/snarl.jpg"></div>
+                <div class="card"><img src="/content/images/dead-pixels/snarl.jpg"></div>
+                <div class="card"><img src="/content/images/dead-pixels/snarl.jpg"></div>
+                <div class="card"><img src="/content/images/dead-pixels/snarl.jpg"></div>
+                <div class="card"><img src="/content/images/dead-pixels/snarl.jpg"></div>
+                <div class="card"><img src="/content/images/dead-pixels/snarl.jpg"></div>
+            </div>
+        </div>
+    </div>
 
     <p slot="journal">
         Hello. This is the first ever journal on Loveisdancing.com.
@@ -25,7 +49,7 @@ import '../../../assets/files/journal.css';
     </p>
 
     <p slot="journal">
-        I'm finding this renaissance of like electropop EDM type stuff super inspiring. <em>Love is dancing</em> has been written for almost a year now which is wild... how the fuck has it been that long. And I still haven't put it out. But sooooon!! I have a photoshoot with this wickedly talented photographer named <a href="https://benhburton.com" target="_blank">Ben Burton</a>. We followed each other on Instagram and as soon as I saw he was from Columbus I had to shoot my shot. I would describe his work as intimate and meticulous which are two themes I see in my upcoming EP.
+        I'm finding this renaissance of like electropop EDM type stuff super inspiring. <em>Love is dancing</em> has been written for almost a year now which is wild... how the fuck has it been that long. And I still haven't put it out. But sooooon!! I have a photoshoot with this wickedly talented photographer named <a href="https://benhburton.com" target="_blank">Ben Burton</a>. We followed each other on Instagram and as soon as I saw he was from Columbus I was like omg. I would describe his work as intimate and meticulous which are two themes I see in <a href="https://Loveisdancing.com/files/music">my upcoming EP</a>.
     </p>
 
     <p slot="journal">
@@ -36,8 +60,19 @@ import '../../../assets/files/journal.css';
         Anyways, I wanna go on a walk now I think. It's 63 degrees which isn't terrible, but I hope walking will keep me warm. Thanks for reading if you did.
     </p>
 
+    <p slot="journal">
+        Update: I went on the walk. No headphones. Just taking in the walk. It was nice. I'm going to post on <a href="https://instagram.com/loveisdancingdotcom" target="_blank">the Loveisdancing.com Instagram account</a> now.
+    </p>
+
+    <audio slot="audio" autoplay loop id="bgaudio">
+  <source src="/content/audio/fx/dance_chords.ogg" type="audio/mpeg">
+    </audio>
+
     </Blog>
 
-    
+    <script>
+    var audio = document.getElementById("bgaudio") as HTMLAudioElement;
+    audio.volume = 0.2;
+    </script>
 
 </Layout>
