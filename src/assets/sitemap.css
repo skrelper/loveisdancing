@@ -75,7 +75,7 @@ li {
 }
 
 ul p {
-/*     font-family: Doto, sans-serif; */
+    font-family: Doto, sans-serif;
     font-weight: 600;
     font-size: 1rem;
     padding-left: 44px;
@@ -94,26 +94,29 @@ ul p {
     padding: 0 20vw;
 }
 
-/* .shadow-host {
+.shadow-host {
     position: fixed;
     top: 0;
     left: 0;
     width: 0;
     height: 0;
     pointer-events: none;
-} */
+}
 
 @media (max-width: 800px) {
 
-  .map-columns {
+.map-columns {
       flex-direction: column;
       padding: 0;
-  }
+}
 
-  .map-column {
+.map-column {
       min-width: 0;
       max-width: 100%;
-  }
+}
+.sitemap {
+    padding: 20px;
+}
 
 h2 {
     font-size: 1.7rem;
