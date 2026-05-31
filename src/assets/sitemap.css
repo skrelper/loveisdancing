@@ -10,6 +10,7 @@ body {
     width: 100%;
     height: calc(var(--vh) * 100);
     display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 
@@ -51,6 +52,10 @@ h2 {
     padding-bottom: 16px;
 }
 
+h2, li {
+  font-weight: 400;
+}
+
 li {
     font-family: Pixelify Sans, sans-serif;
     color: var(--beat);
@@ -70,7 +75,7 @@ li {
 }
 
 ul p {
-    font-family: Doto, sans-serif !important;
+/*     font-family: Doto, sans-serif; */
     font-weight: 600;
     font-size: 1rem;
     padding-left: 44px;
@@ -89,14 +94,14 @@ ul p {
     padding: 0 20vw;
 }
 
-.shadow-host {
+/* .shadow-host {
     position: fixed;
     top: 0;
     left: 0;
     width: 0;
     height: 0;
     pointer-events: none;
-}
+} */
 
 @media (max-width: 800px) {
 
