@@ -1,0 +1,21 @@
+h1 {
+    display: none;
+}
+
+.truncate {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: var(--beat);
+}
+
+a:hover {
+    color: var(--heart);
+    filter: blur(0.5px);
+}

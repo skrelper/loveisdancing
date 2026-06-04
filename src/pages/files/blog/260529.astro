@@ -2,15 +2,23 @@
 import Layout from '../../../layouts/Layout.astro';
 import Blog from '../../../layouts/blog.astro';
 import '../../../assets/files/journal.css';
+
+export const frontmatter = {
+  title: "Love is fucking dancing and it's music and dance is sex",
+  date: "260530",
+};
 ---
 
-<Layout title="260529" url="https://Loveisdancing.com/files/blog/260529">
+<Layout title={frontmatter.date + " " + frontmatter.title} url="https://Loveisdancing.com/files/blog/260529">
 
     <Blog
     
-    date="260530"
-    title="Love is fucking dancing and it's music and dance is sex"
+    date={frontmatter.date}
+    title={frontmatter.title}
     caption="Shoutout Matt for the jacket."
+    backgroundColor="white"
+    textColor="black"
+    invertLogo={false}
     
     >
     

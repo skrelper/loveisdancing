@@ -35,3 +35,13 @@ button.textContent = "";
 
   button.appendChild(buttonSpan);
 });
+
+function startFakeLoad() {
+  const loader = document.getElementById("loading-screen");
+
+  loader.classList.add("active");
+
+  setTimeout(() => {
+    window.location.href = "https://loveisdancing.com/home";
+  }, 1000);
+}

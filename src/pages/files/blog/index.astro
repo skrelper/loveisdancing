@@ -1,11 +1,84 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
+import Sidebar from '../../../layouts/sidebar.astro';
+import '../../../assets/files/blog.css';
+
+type Frontmatter = {
+  title: string;
+  date: string;
+  caption?: string;
+  backgroundColor?: string;
+  textColor?: string;
+  invertLogo?: boolean;
+};
+
+type BlogModule = {
+  frontmatter: Frontmatter;
+};
+
+const posts = import.meta.glob<BlogModule>('./*.astro', { eager: true });
+
+let list = Object.entries(posts).map(([path, module]) => {
+  const slug = path.replace('./', '').replace('.astro', '');
+  return {
+    slug,
+    ...module.frontmatter
+  };
+});
+
+list.sort((a, b) => {
+  const da = Number(a.date) || 0;
+  const db = Number(b.date) || 0;
+  return db - da;
+});
+
+const featured = list[0];
+
+const rest = list.slice(1);
+
+for (let i = rest.length - 1; i > 0; i--) {
+  const j = Math.floor(Math.random() * (i + 1));
+  [rest[i], rest[j]] = [rest[j], rest[i]];
+}
+
+console.log(list);
 ---
 
-<Layout title="Max Bass - Blog" description="Just say yes I know you want something is the way you move Love is the dance you do..." url="https://Loveisdancing.com/blog">
+<Layout title="Max Bass - Blog" description="Record it before it blurs, hurry, repeat" url="https://Loveisdancing.com/files/blog">
 
-    <h1>Blog</h1>
+<h1>Blog</h1>
 
-    <p>I've posted <a href="/files/blog/260529" style="color:aqua; text-decoration:underline;">my first blog</a>.</p>
+<Sidebar>
+
+<div class="blogs-container">
+
+<div class="feat-container">
+
+    <section class="featured">
+    <a href={`/files/blog/${featured.slug}`}>
+        <h2>{featured.date}</h2>
+        <p class="truncate">{featured.title}</p>
+    </a>
+    </section>
+
+</div>
+
+<div class="list-container">
+
+    <ul class="random-list">
+    {rest.map(post => (
+        <li class="random-blog">
+            <a href={`/files/blog/${post.slug}`}>
+            <p>{post.date}<span class="truncate">{post.title}</span></p>
+            </a>
+        </li>
+    ))}
+    </ul>
+
+</div>
+
+</div>
+
+</Sidebar>
 
 </Layout>
