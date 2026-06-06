@@ -1,3 +1,13 @@
+body {
+    min-width: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    height: calc(var(--vh) * 100);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
 h1 {
     display: none;
 }
@@ -7,7 +17,7 @@ h1 {
     flex-direction: row;
     justify-content: space-between;
     margin-left: 9px;
-    margin-bottom: 10px;
+    margin-bottom: 6px;
     width: 100%;
     color: var(--pollen);
     font-family: Syne Mono, sans-serif;
@@ -35,7 +45,7 @@ h1 {
     align-items: center;
     height: auto;
     min-height: 30vh;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     background-image: url('/content/images/blog/260604/max1_edit.jpg');
     background-size: cover;
     background-position: top;

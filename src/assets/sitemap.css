@@ -35,13 +35,12 @@ h1 {
 }
 
 a {
-    text-decoration: underline;
+    text-decoration: none;
     color: var(--beat);
 }
 
 a:hover {
-    color: var(--heart);
-    filter: blur(0.5px);
+    text-decoration: underline;
 }
 
 h2 {
@@ -63,13 +62,18 @@ li {
     line-height: 150%;
     z-index: 10;
     padding-left: 30px;
+    padding-bottom: 16px;
+}
+
+.second {
+    padding-left: 60px;
 }
 
 .map-column {
     border: 0px black solid;
     flex: 1;
-    max-width: 400px;
-    min-width: 300px;
+    max-width: 300px;
+    min-width: 200px;
     height: auto;
     margin-top: 0px;
 }
@@ -119,15 +123,15 @@ ul p {
 }
 
 h2 {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
 }
 
 li {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
 }
 
 ul p {
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 }
