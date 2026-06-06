@@ -2,20 +2,152 @@ h1 {
     display: none;
 }
 
+.categories {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 9px;
+    margin-bottom: 10px;
+    width: 100%;
+    color: var(--pollen);
+    font-family: Syne Mono, sans-serif;
+    font-weight: 200;
+    font-size: 0.8rem;
+}
+
+.cat-container {
+    width: 100%;
+    height: 100%;
+}
+
+#name {
+    flex: 3;
+}
+
+#date-created {
+    flex: 2;
+}
+
+.feat-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    min-height: 30vh;
+    margin-bottom: 20px;
+    background-image: url('/content/images/blog/260604/max1_edit.jpg');
+    background-size: cover;
+    background-position: top;
+    border-left: white 15px solid;
+    
+}
+
+.list-container {
+    padding-left: 6px;
+}
+
+#image-anchor {
+    display: contents;
+}
+
 .truncate {
-  display: block;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+    display: inline-block;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.random-blog .truncate {
   max-width: 100%;
 }
 
+.random-blog {
+    min-width: 0;
+}
+
+.random-blog p {
+    display: flex;
+    min-width: 0;
+    width: 100%;
+}
+
+.random-blog .truncate {
+    min-width: 0;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
 a {
-    text-decoration: none;
+    text-decoration: none !important;
     color: var(--beat);
 }
 
-a:hover {
-    color: var(--heart);
-    filter: blur(0.5px);
+.blog-link {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.blog-link:hover {
+    color: var(--beat) !important;
+    filter: none !important;
+    text-decoration: underline !important;
+}
+
+li p{
+    text-align: left !important;
+}
+
+.post-date {
+    font-family: Doto, sans-serif;
+    font-weight: 1000;
+    flex: 2;
+    padding-left: 30px;
+}
+
+.post-title {
+    font-family: Pixelify Sans, sans-serif;
+    font-weight: 100;
+    letter-spacing: -2%;
+    word-spacing: 2px;
+    line-height: 86%;
+    font-size: 1rem;
+    flex: 3;
+}
+
+.feat-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex: 1;
+}
+
+h2 {
+    font-size: 1.4rem;
+    font-family: Doto, sans-serif;
+    font-weight: 1000;
+    color: white;
+}
+
+.feat-info p {
+    font-family: Pixelify Sans, sans-serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    letter-spacing: -2%;
+    word-spacing: 2px;
+    line-height: 86%;
+    color: white;
+}
+
+.feat-info a {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    width: 100%;
+    padding-left: 20px;
 }

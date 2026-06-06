@@ -1,0 +1,102 @@
+---
+import Layout from '../../../../layouts/Layout.astro';
+import Sidebar from '../../../../layouts/sidebar.astro';
+import '../../../../assets/files/blog.css';
+
+type Frontmatter = {
+  title: string;
+  date: string;
+  caption?: string;
+  backgroundColor?: string;
+  textColor?: string;
+  invertLogo?: boolean;
+};
+
+type BlogModule = {
+  frontmatter: Frontmatter;
+};
+
+const posts = import.meta.glob<BlogModule>('./*.astro', { eager: true });
+
+let list = Object.entries(posts).map(([path, module]) => {
+  const slug = path.replace('./', '').replace('.astro', '');
+  return {
+    slug,
+    ...module.frontmatter
+  };
+});
+
+list.sort((a, b) => {
+  const da = Number(a.date) || 0;
+  const db = Number(b.date) || 0;
+  return db - da;
+});
+
+const featured = list[0];
+
+const rest = list.slice(1);
+
+for (let i = rest.length - 1; i > 0; i--) {
+  const j = Math.floor(Math.random() * (i + 1));
+  [rest[i], rest[j]] = [rest[j], rest[i]];
+}
+---
+
+<Layout title="Max Bass - Blog" description="Record it before it blurs, hurry, repeat" url="https://Loveisdancing.com/files/documents/blog">
+
+<h1>Max Bass - Blog</h1>
+
+<Sidebar>
+
+<div class="blogs-container">
+
+  <div class="feat-container">
+
+      <!-- <div class="feat-image">
+        <a href={`/files/blog/${featured.slug}`} id="image-anchor">
+        <img src="/content/images/blog/260604/max1_edit.jpg">
+        </a>
+      </div> -->
+
+      <div class="feat-info">
+          <a href={`/files/documents/blog/${featured.slug}`} class="blog-link">
+              <h2>{featured.date}</h2>
+              <p id="feat-title">{featured.title}</p>
+          </a>
+      </div>
+
+  </div>
+
+  <div class="list-container">
+
+    <div class="categories">
+
+      <div class="cat-container" id="name">
+        <h4>Name</h4>
+      </div>
+      <div class="cat-container" id="date-created">
+        <h4>Date Created</h4>
+      </div>
+
+    </div>
+
+      <ul class="random-list">
+      {rest.map(post => (
+          <li class="random-blog">
+            <p>
+                <a href={`/files/documents/blog/${post.slug}`} class="blog-link">
+                  <span class="post-title">{post.title}</span>
+                  <span class="post-date">{post.date}</span>
+                </a>
+            </p>
+          </li>
+      ))}
+      </ul>
+
+  </div>
+
+</div>
+
+</Sidebar>
+
+</Layout>

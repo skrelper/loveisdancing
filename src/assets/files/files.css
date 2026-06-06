@@ -9,26 +9,59 @@ body {
 }
 
 h1 {
-    color: var(--beat);
-    font-size: 2.8rem;
-    filter: drop-shadow(0 0 10px var(--pollen));
-/*     border: black solid 1px; */
-    text-align: center;
-    line-height: 90%;
-    filter: blur(10px)
-}
-
-a {
-    text-decoration: underline;
-    color: var(--beat);
-}
-
-a:hover {
-    color: var(--heart);
-    filter: blur(0.5px);
+    display: none;
 }
 
 h1:hover {
     color: var(--heart);
     filter: blur(0px);
+}
+
+.qa-container {
+    width: 100%;
+    height: 100%;
+    padding-left: 20px;
+/*     border: var(--pollen) 2px solid; */
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-width: none;
+}
+
+.qa-container::-webkit-scrollbar {
+    display: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.quick-access {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 1fr;
+    gap: 1em;
+
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.qa-item {
+    width: 250px;
+    height: 250px;
+/*     border: cyan 1px solid; */
+    display: flex;
+    flex-direction: column;
+}
+
+.qa-item img, .qa-item a {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.file-caption {
+    font-family: Syne Mono, sans-serif;
 }

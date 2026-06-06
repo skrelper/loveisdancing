@@ -1,7 +1,7 @@
 ---
-import Layout from '../../../layouts/Layout.astro';
-import Blog from '../../../layouts/blog.astro';
-import '../../../assets/files/journal.css';
+import Layout from '../../../../layouts/Layout.astro';
+import Blog from '../../../../layouts/blog.astro';
+import '../../../../assets/files/journal.css';
 
 export const frontmatter = {
   title: "Dead pixels",
@@ -9,7 +9,7 @@ export const frontmatter = {
 };
 ---
 
-<Layout title={frontmatter.date + " " + frontmatter.title} url="https://Loveisdancing.com/files/blog/260604">
+<Layout title={frontmatter.date + " " + frontmatter.title} url="https://Loveisdancing.com/files/documents/blog/260604">
 
     <Blog
     
@@ -79,7 +79,7 @@ export const frontmatter = {
     </p>
 
     <audio slot="audio" autoplay loop id="bgaudio">
-  <source src="/content/audio/fx/dance_chords.ogg" type="audio/mpeg">
+    <source src="/content/audio/fx/dance_chords.ogg" type="audio/mpeg">
     </audio>
 
     </Blog>

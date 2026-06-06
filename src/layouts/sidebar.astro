@@ -3,14 +3,55 @@ import '../styles/global.css';
 import '../assets/sidebar.css';
 ---
 
+<div class="center">
 <div class="whole-container">
 
     <div class="sidebar-container">
 
+        <div class="top-middle">
+
+        <div class="top-list">
+            <div class="tab" id="home">
+                <a href="https://Loveisdancing.com/home">Home</a>
+            </div>
+        </div>
+
+        <div class="middle-list">
+            <div class="tab">
+                <a href="https://Loveisdancing.com/files/music">Music</a>
+            </div>
+            <div class="tab">
+                <a href="https://Loveisdancing.com/files/documents/blog">Documents</a>
+            </div>
+            <div class="tab">
+                <a href="https://Loveisdancing.com/files/gallery">Gallery</a>
+            </div>
+        </div>
+
+        </div>
+
+        <div class="bottom-list">
+            <div class="tab">
+                <a href="https://Loveisdancing.com/files">This PC</a>
+            </div>
+            <div class="tab">
+                <a href="https://Loveisdancing.com/archive">Archive</a>
+            </div>
+        </div>
+
+        <div class="log-out">
+            <div class="tab">
+                <a href="https://Loveisdancing.com/">Log Out</a>
+            </div>
+        </div>
+
     </div>
 
-    <div class="m">
-        <slot />
+    <div class="content-container">
+        <div class="slot-wrapper">
+            <slot />
+        </div>
     </div>
 
+</div>
 </div>

@@ -28,11 +28,8 @@ body {
 
 .logo {
     margin-top: 30px;
+    width: clamp(150px, 40vw, 300px);
     transform: translateY(30px);
-    width: 40%;
-    min-width: 250px;
-    max-width: 300px;
-    height: auto;
     justify-self: center;
     transform-origin: center;
     filter: var(--logo-filter);
@@ -228,8 +225,4 @@ p a:hover {
     color: var(--beat);
     cursor: pointer;
     filter: blur(0px);
-}
-
-.audio {
-    display: none;
 }
