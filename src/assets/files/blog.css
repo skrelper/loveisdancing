@@ -6,6 +6,7 @@ body {
     justify-content: center;
     align-items: center;
     display: flex;
+    cursor: url("/content/svg/HeartBeatSymbol_Cyan.svg"), auto;
 }
 
 h1 {
@@ -50,8 +51,8 @@ h1 {
     background-size: cover;
     background-position: top;
     border-left: white 15px solid;
-    
 }
+
 
 .list-container {
     padding-left: 6px;
@@ -59,18 +60,6 @@ h1 {
 
 #image-anchor {
     display: contents;
-}
-
-.truncate {
-    display: inline-block;
-    max-width: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.random-blog .truncate {
-  max-width: 100%;
 }
 
 .random-blog {
@@ -81,13 +70,6 @@ h1 {
     display: flex;
     min-width: 0;
     width: 100%;
-}
-
-.random-blog .truncate {
-    min-width: 0;
-    white-space: normal;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
 }
 
 a {

@@ -1,57 +1,192 @@
 body {
-    background-image: url('/content/images/HeartBeat_Ideation/Love_is_dancing/circle.gif');
-    background-size: cover;
-    font-family: "Inter Tight", sans-serif;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: calc(var(--vh) * 100);
     min-width: 100%;
     width: 100%;
     overflow-x: hidden;
-    padding: 0;
-    margin: 0;
+    height: calc(var(--vh) * 100);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    cursor: url("/content/svg/HeartBeatSymbol_Cyan.svg"), auto;
 }
 
 h1 {
-    color: var(--beat);
-    font-size: 1.8rem;
-    padding-bottom: 20px;
+    display: none;
+}
+
+/* h2 {
+    font-size: 1.4rem;
+    font-family: Doto, sans-serif;
+    font-weight: 1000;
+    color: white;
+} */
+
+.qa-container {
+    width: 100%;
+    height: 100%;
+    padding-left: 20px;
+/*     border: var(--pollen) 2px solid; */
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-width: none;
+}
+
+.qa-container::-webkit-scrollbar {
+    display: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.quick-access {
+    display: grid;
+    width: 100%;
+    min-height: 30vh;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 1fr;
+    gap: 1em;
+
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    border-left: white 15px solid;
+}
+
+.qa-item {
+    min-height: 30vh;
+    width: auto;
+/*     border: cyan 1px solid; */
+    display: flex;
+    flex-direction: row;
+}
+
+@media (max-width: 768px) {
+    
+.qa-item {
+    flex-direction: column;
+}
+
+}
+
+.item-image {
+    flex-shrink: 0;
+}
+
+.item-image img {
+    height: 30vh;
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.item-caption {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 30px;
+    width: auto;
+    max-width: 250px;
 }
 
 h3 {
-    font-family: Pixelify Sans, sans-serif;
-    color: var(--beat);
-}
-
-p {
+    font-family: Syne Mono, sans-serif;
     color: var(--pollen);
     font-size: 0.8rem;
-    letter-spacing: 0.03em;
-    opacity: 0.8;
+    font-weight: 200;
+    margin-bottom: 9px;
 }
 
-.caption {
-    font-size: 0.7rem;
+h5 {
+    font-size: 0.8rem;
+    font-family: Doto, sans-serif;
+    font-weight: 1000;
     color: var(--pollen);
+    line-height: 70%;
+}
+
+.item-caption p {
+    color: black;
     font-family: Pixelify Sans, sans-serif;
-    opacity: 0.6;
+    font-weight: 100;
+    letter-spacing: -2%;
+    word-spacing: 2px;
+    line-height: 86%;
+    font-size: 1rem;
 }
 
 a {
-    text-decoration: underline;
+    text-decoration: none !important;
     color: var(--beat);
 }
 
-a:hover {
-    color: var(--beat);
-    filter: blur(0.5px);
+.music-link {
+    display: flex;
+    width: 100%;
+    height: 100%;
 }
 
-audio {
-    padding-top: 5px;
-    max-width: 250px;
-    color: var(--heart);
+.music-link:hover {
+    color: var(--beat) !important;
+    filter: none !important;
+    text-decoration: underline !important;
+}
+
+.categories {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 9px;
+    margin-bottom: 6px;
+    width: 100%;
+    color: var(--pollen);
+    font-family: Syne Mono, sans-serif;
+    font-weight: 200;
+    font-size: 0.8rem;
+}
+
+.cat-container {
+    width: 100%;
+    height: 100%;
+}
+
+.list-container {
+    padding-left: 6px;
+}
+
+.file-li {
+    min-width: 0;
+}
+
+.file-li p {
+    display: flex;
+    min-width: 0;
+    width: 100%;
+}
+
+.file-link {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.file-link:hover {
+    color: var(--beat) !important;
+    filter: none !important;
+    text-decoration: underline !important;
+}
+
+li p{
+    text-align: left !important;
+}
+
+.file-title {
+    font-family: Pixelify Sans, sans-serif;
+    font-weight: 100;
+    letter-spacing: -2%;
+    word-spacing: 2px;
+    line-height: 86%;
+    font-size: 1rem;
+    flex: 3;
+    padding-left: 9px;
 }

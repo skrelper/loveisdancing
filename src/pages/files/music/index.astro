@@ -1,19 +1,61 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
+import Sidebar from '../../../layouts/sidebar.astro';
 import '../../../assets/files/music.css'
 ---
 
-<Layout title="Max Bass - Music" description="Love is music, dance is sex..." url="https://Loveisdancing.com/music">
+<Layout title="Max Bass - Music" description="This PC/user/Max Bass/Loveisdancing.com/Files/Music" url="https://Loveisdancing.com/files/music">
 
-    <a href="https://youtu.be/ukHzCk0bxm4?si=O--TSC5qXG3A5lGT" target="_blank"><h1>Music</h1></a>
-    <h3>Page under development.</h3>
-    <p class="caption">Shoutout Matt for the jacket.</p>
-    <br>
-    <p><a href="/content/text/It-all-just-dies.txt" target="_blank">Secret third track off HeartBeat:</a></p>
-    <audio controls>
-        <source src="/content/audio/italljustdies.mp3" type="audio/mpeg">
-    </audio>
+<h1>Music</h1>
 
-<script src="/scripts/heartbeatideation.js" defer></script>
+<Sidebar>
+
+        <div class="music-container">
+
+
+             <div class="quick-access">
+
+                <div class="qa-item">
+                    <div class="item-image">
+                        <a href="https://www.youtube.com/watch?v=ukHzCk0bxm4">
+                        <img src="/content/images/music/dance_cover.png">
+                        </a>
+                    </div>
+                    <div class="item-caption">
+                        <h5 class="caption-date">260611</h5>
+                        <h3 class="from-max">From: Max</h3>
+                        
+                        <p>Put out a song last year called DANCE and u can check it out by clicking on the image.. more coming soon!</p>
+                    </div>
+                </div>
+        </div>
+
+            <div class="list-container">
+
+                <div class="categories">
+
+                <div class="cat-container" id="name">
+                    <h4>Name</h4>
+                </div>
+
+                </div>
+
+                <ul class="file-list">
+
+                        <li class="file-li">
+                            <p>
+                                <a class="file-link">
+                                <span class="file-title">This page is under development</span>
+                                </a>
+                            </p>
+                        </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+</Sidebar>
 
 </Layout>

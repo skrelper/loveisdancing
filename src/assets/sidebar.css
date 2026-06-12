@@ -17,8 +17,8 @@
 .whole-container {
     display: flex;
     flex-direction: row;
-    width: 80vw;
-    height: 80vh;
+    width: 85vw;
+    height: 85vh;
     margin: 0 auto;
 /*     border: black 2px solid; */
     overflow: hidden;
@@ -44,7 +44,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 10%;
+    width: 8%;
     min-width: 100px;
     height: 100%;
     border-right: var(--pollen) 1px solid;
@@ -71,7 +71,7 @@
 }
 
 .content-container {
-    width: 90%;
+    width: 92%;
     min-width: 0;
     overflow-y: auto;
     overflow-x: hidden;
