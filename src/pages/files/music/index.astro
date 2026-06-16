@@ -13,7 +13,7 @@ import '../../../assets/files/music.css'
         <div class="music-container">
 
 
-             <div class="quick-access">
+            <div class="quick-access">
 
                 <div class="qa-item">
                     <div class="item-image">
@@ -25,10 +25,10 @@ import '../../../assets/files/music.css'
                         <h5 class="caption-date">260611</h5>
                         <h3 class="from-max">From: Max</h3>
                         
-                        <p>Put out a song last year called DANCE and u can check it out by clicking on the image.. more coming soon!</p>
+                        <p>Put out a song last year called DANCE and u can check it out by clicking on the image.. more coming soooooonnnnnnnn</p>
                     </div>
                 </div>
-        </div>
+            </div>
 
             <div class="list-container">
 
@@ -57,5 +57,57 @@ import '../../../assets/files/music.css'
         </div>
 
 </Sidebar>
+
+<script>
+// @ts-nocheck
+  /**
+   * @param {string[]} files
+   */
+
+   const list = document.querySelector('.file-list');
+        list.innerHTML = '';
+
+  function loadFiles(files) {
+
+    const filtered = files.filter(f => !f.endsWith('files.json'));
+
+    const shuffled = filtered.sort(() => Math.random() - 0.5);
+
+    shuffled.forEach((file) => {
+
+        const url = file.startsWith('/') ? file : `/${file}`;
+
+        const li = document.createElement('li');
+        li.className = 'file-li';
+
+        const p = document.createElement('p');
+        
+        const a = document.createElement('a');
+        a.className = 'file-link';
+        a.href = url;
+
+        const span = document.createElement('span');
+        span.className = 'file-title';
+        span.textContent = file.split('/').pop();
+
+        a.appendChild(span);
+        p.appendChild(a);
+        li.appendChild(p);
+        list?.appendChild(li);
+
+        fetch(url)
+          .then(res => res.blob())
+          .then(blob => {
+            console.log(`Loaded ${file}`, blob);
+          });
+      }
+    );
+  }
+
+  fetch('/content/music/files.json')
+    .then(res => res.json())
+    .then(loadFiles);
+
+</script>
 
 </Layout>

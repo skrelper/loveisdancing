@@ -60,6 +60,7 @@ body::-webkit-scrollbar {
 /*     border: cyan 1px solid; */
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 @media (max-width: 768px) {
@@ -86,12 +87,12 @@ body::-webkit-scrollbar {
     flex-direction: column;
     padding: 30px 30px;
     width: auto;
-    max-width: 250px;
+    max-width: 350px;
 }
 
 h3 {
     font-family: Syne Mono, sans-serif;
-    color: var(--pollen);
+    color: black;
     font-size: 0.8rem;
     font-weight: 200;
     margin-bottom: 9px;
@@ -101,17 +102,17 @@ h5 {
     font-size: 0.8rem;
     font-family: Doto, sans-serif;
     font-weight: 1000;
-    color: var(--pollen);
+    color: black;
     line-height: 70%;
 }
 
 .item-caption p {
     color: black;
-    font-family: Pixelify Sans, sans-serif;
-    font-weight: 100;
-    letter-spacing: -2%;
-    word-spacing: 2px;
-    line-height: 86%;
+    font-family: Syne Mono, sans-serif;
+    font-weight: 500;
+    letter-spacing: -4%;
+    word-spacing: 0px;
+    line-height: 97%;
     font-size: 1rem;
 }
 
@@ -156,6 +157,7 @@ a {
 
 .file-li {
     min-width: 0;
+    padding-bottom: 12px;
 }
 
 .file-li p {

@@ -44,10 +44,11 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 8%;
+    width: 9%;
     min-width: 100px;
     height: 100%;
     border-right: var(--pollen) 1px solid;
+    margin-right: 10px;
     flex-shrink: 0;
 }
 
@@ -71,7 +72,7 @@
 }
 
 .content-container {
-    width: 92%;
+    width: 91%;
     min-width: 0;
     overflow-y: auto;
     overflow-x: hidden;
