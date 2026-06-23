@@ -18,15 +18,13 @@ function fileListGenerator() {
 export default defineConfig({
   integrations: [
     tailwind(),
-    fileListGenerator() // ← register your custom integration
+    fileListGenerator()
   ],
   redirects: {
     '/prompts': '/iam/prompts',
     '/music': '/files/music',
     '/gallery': '/files/gallery',
     '/blog': '/files/blog',
-    '/store': '/files/store',
     '/heartbeatideation': '/ben',
-    '/files/blog': '/files/documents/blog',
   }
 });

@@ -1,0 +1,86 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Blog from '../../../layouts/blog.astro';
+import '../../../assets/files/journal.css';
+
+export const frontmatter = {
+  title: "Love is fucking dancing and it's music and dance is sex",
+  date: "260530",
+};
+---
+
+<Layout title={frontmatter.date + " " + frontmatter.title} url="https://Loveisdancing.com/files/blog/260529">
+
+    <Blog
+    
+    date={frontmatter.date}
+    title={frontmatter.title}
+    caption="Shoutout Matt for the jacket."
+    backgroundColor="white"
+    textColor="black"
+    invertLogo={false}
+    
+    >
+    
+<!--     <div slot="image" class="blogimg"></div> -->
+<!--     <img src="/content/images/dead-pixels/snarl.jpg" slot="image" class="blogimg"> -->
+
+    <div slot="image" class="carousel">
+        <div class="track">
+            <div class="group">
+                <div class="card"><img src="/content/images/dead-pixels/snarl.jpg"></div>
+                <div class="card"><img src="/content/images/dead-pixels/snarl.jpg"></div>
+                <div class="card"><img src="/content/images/dead-pixels/snarl.jpg"></div>
+                <div class="card"><img src="/content/images/dead-pixels/snarl.jpg"></div>
+                <div class="card"><img src="/content/images/dead-pixels/snarl.jpg"></div>
+                <div class="card"><img src="/content/images/dead-pixels/snarl.jpg"></div>
+                <div class="card"><img src="/content/images/dead-pixels/snarl.jpg"></div>
+            </div>
+            <div aria-hidden class="group">
+                <div class="card"><img src="/content/images/dead-pixels/snarl.jpg"></div>
+                <div class="card"><img src="/content/images/dead-pixels/snarl.jpg"></div>
+                <div class="card"><img src="/content/images/dead-pixels/snarl.jpg"></div>
+                <div class="card"><img src="/content/images/dead-pixels/snarl.jpg"></div>
+                <div class="card"><img src="/content/images/dead-pixels/snarl.jpg"></div>
+                <div class="card"><img src="/content/images/dead-pixels/snarl.jpg"></div>
+                <div class="card"><img src="/content/images/dead-pixels/snarl.jpg"></div>
+            </div>
+        </div>
+    </div>
+
+    <p slot="journal">
+        Hello. This is the first ever journal on Loveisdancing.com.
+    </p>
+
+    <p slot="journal">
+        I'm really excited for how the website is turning out. Right now, I'm taking a lot of inspiration from <a href="https://isobelsweb.com" target="_blank">isobelsweb.com</a> and <a href="https://cratre.net" target="_blank">cratre.net</a>. If you don't know them, I highly recommend you check them out. Also <a href="https://kidlucky.online" target="_blank">kidlucky.online</a>, <a href="https://girledm.com">girledm.com</a>, and <a href="https://kimpetras.com" target="_blank">kimpetras.com</a>. <em>Detour</em> came out yesterday and it's soooo fucking good.
+    </p>
+
+    <p slot="journal">
+        I'm finding this renaissance of like electropop EDM type stuff super inspiring. <em>Love is dancing</em> has been written for almost a year now which is wild... how the fuck has it been that long. And I still haven't put it out. But sooooon!! I have a photoshoot with this wickedly talented photographer named <a href="https://benhburton.com" target="_blank">Ben Burton</a>. We followed each other on Instagram and as soon as I saw he was from Columbus I was like omg. I would describe his work as intimate and meticulous which are two themes I see in <a href="https://Loveisdancing.com/files/music">my upcoming EP</a>.
+    </p>
+
+    <p slot="journal">
+        I don't really know what to write for these blogs, so it's mostly just stream-of-consciousness shit right now. Also, the blog date is listed as yesterday's because that's when I started building the layout, but it took me too long that I never actually started writing anything. I'm also kind of sick today and have no plans, so I figured it'd be a good chill activity. I actually do have to work on something, though. For my senior capstone project I made an <a href="https://Loveisdancing.com/iam" target="_blank">interactive audiovisual machine</a> and someone asked me if I'd be interested in collaborating with local musicians to see how it would react to live music. The issue is I wanted to make it more interactive by having each input or instrument do different things, but I don't have a multi-track input that I can use to test. So I downloaded stems from Isobel's <em>Dear April</em> instead. So I do need to test that out today.
+    </p>
+
+    <p slot="journal">
+        Anyways, I wanna go on a walk now I think. It's 63 degrees which isn't terrible, but I hope walking will keep me warm. Thanks for reading if you did.
+    </p>
+
+    <p slot="journal">
+        Update: I went on the walk. No headphones. Just taking in the walk. It was nice. I'm going to post on <a href="https://instagram.com/loveisdancingdotcom" target="_blank">the Loveisdancing.com Instagram account</a> now.
+    </p>
+
+    <audio slot="audio" autoplay loop id="bgaudio">
+  <source src="/content/audio/fx/dance_chords.ogg" type="audio/mpeg">
+    </audio>
+
+    </Blog>
+
+    <script>
+    var audio = document.getElementById("bgaudio") as HTMLAudioElement;
+    audio.volume = 0.2;
+    </script>
+
+</Layout>

@@ -1,0 +1,80 @@
+body {
+    min-width: 100%;
+    width: 100%;
+    overflow: hidden;
+    height: calc(var(--vh) * 100);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    cursor: url("/content/svg/HeartBeatSymbol_Cyan.svg"), auto;
+}
+
+h1 {
+    display: none;
+}
+
+.main-container {
+    width: 60vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.bio {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    background-color: white;
+    width: 40vw;
+    height: auto;
+    padding: 20px;
+}
+
+p {
+    font-family: Doto, sans-serif;
+    font-weight: 800;
+    line-height: .97;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    z-index: 1;
+    width: max-content;
+    height: 100vh;
+}
+
+.track {
+    display: flex;
+    flex-direction: column;
+    animation: scroll 120s linear infinite;
+}
+
+.group {
+    display: flex;
+    flex-direction: column;
+}
+
+.card img {
+    width: 60vw;
+    height: auto;
+    object-fit: contain;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}

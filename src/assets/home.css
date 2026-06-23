@@ -124,6 +124,18 @@ audio {
     color: var(--beat);
 }
 
+.filename {
+    font-family: Doto, sans-serif;
+    color: var(--beat);
+    font-weight: 800;
+    letter-spacing: -3%;
+    padding-top: 10px;
+}
+
+a:hover{
+    color: var(--beat);
+}
+
 @media (max-width: 800px) {
 
     .main-icons {
