@@ -1,0 +1,71 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: calc(var(--vh) * 100);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    display: none;
+}
+
+.main-container {
+    width: 100vw;
+    height: 100vh;
+}
+
+.store-items {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.store-item {
+    width: 250px;
+    height: auto;
+}
+
+.image-container {
+    width: 250px;
+    height: 250px;
+    background-image: url("/public/content/images/music/HeartBeat/HeartBeatCover1500.jpg");
+    background-size: cover;
+    margin-bottom: 16px;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.store-item p {
+    font-family: Doto, sans-serif;
+    margin: 0;
+    text-align: center;
+}
+
+.product-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.product-cost {
+    font-family: Syne Mono, sans-serif !important;
+    transform: translateY(-2px);
+    font-weight: 100;
+    font-size: 0.7rem;
+    letter-spacing: -2%;
+    opacity: 0.7;
+}
+
+a {
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: none !important;
+}

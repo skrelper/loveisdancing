@@ -146,12 +146,12 @@ button.login{
     padding: 10px 5px;
     border: none;
     background: white;
-    color: var(--beat);
+    color: black;
     cursor: pointer;
 }
 
 button.login:hover {
-    color: var(--pollen);
+    color: var(--beat);
 }
 
 #promptmachine{

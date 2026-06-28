@@ -59,7 +59,7 @@ for (let i = rest.length - 1; i > 0; i--) {
       </div> -->
 
       <div class="feat-info">
-          <a href={`/files/documents/blog/${featured.slug}`} class="blog-link">
+          <a href={`/files/blog/${featured.slug}`} class="blog-link">
               <h2>{featured.date}</h2>
               <p id="feat-title">{featured.title}</p>
           </a>
@@ -84,7 +84,7 @@ for (let i = rest.length - 1; i > 0; i--) {
       {rest.map(post => (
           <li class="random-blog">
             <p>
-                <a href={`/files/documents/blog/${post.slug}`} class="blog-link">
+                <a href={`/files/blog/${post.slug}`} class="blog-link">
                   <span class="post-title">{post.title}</span>
                   <span class="post-date">{post.date}</span>
                 </a>

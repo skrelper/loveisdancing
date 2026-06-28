@@ -48,7 +48,7 @@ h1 {
     min-height: 30vh;
     margin-bottom: 30px;
     background-image: url('/content/images/blog/260604/max1_edit.jpg');
-    background-size: cover;
+    background-size: contain;
     background-position: top;
     border-left: white 15px solid;
 }

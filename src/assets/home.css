@@ -125,10 +125,10 @@ audio {
 }
 
 .filename {
-    font-family: Doto, sans-serif;
+    font-family: Syne Mono, sans-serif;
     color: var(--beat);
-    font-weight: 800;
-    letter-spacing: -3%;
+    font-weight: 500;
+    letter-spacing: -1%;
     padding-top: 10px;
 }
 
