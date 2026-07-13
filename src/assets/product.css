@@ -53,6 +53,13 @@ h1 {
     text-align: left;
 }
 
+.name-cost {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+    gap: 2em;
+}
+
 .store-item p {
     text-align: left;
 }
@@ -60,31 +67,24 @@ h1 {
 .product-name {
     font-family: Doto, sans-serif;
     font-size: 1.6rem;
-    font-weight: 600;
-}
-
-.description {
-    font-family: Syne Mono, sans-serif;
-    font-size: 0.8rem;
-    letter-spacing: -2%;
-    opacity: 0.7;
-    margin-top: 10px;
-    line-height: 1;
-}
-
-#subhead {
     font-weight: 800;
-    font-size: 1rem;
-    font-family: Doto, sans-serif;
-    margin-bottom: 20px;
+    background-color: var(--snow);
+    color: var(--love);
+    padding: 0 10px;
 }
 
 .product-cost {
-    font-family: Pixelify Sans, sans-serif !important;
-    font-weight: 200;
-    font-size: 1rem;
-    opacity: 0.7;
-    margin-bottom: 30px;
+    font-family: Doto, sans-serif !important;
+    font-weight: 600;
+    font-size: 1.6rem;
+}
+
+.description {
+    font-family: Doto, sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    line-height: 1.1;
 }
 
 a {

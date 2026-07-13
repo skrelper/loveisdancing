@@ -67,7 +67,6 @@ body {
     color: var(--beat);
 }
 
-
 .emptyspace {
     height: 50px;
     width: auto;
@@ -96,8 +95,20 @@ body {
 p,
 h1,
 h3,
+h4,
 h6 {
   color: var(--blog-text);
+}
+
+h4 {
+    font-size: 18px;
+    font-family: Doto, sans-serif;
+    text-align: center !important;
+    width: 60vw;
+    height: auto;
+    margin: 40px 0;
+    padding: 0 10px;
+    word-spacing: 3px;
 }
 
 /* .blogimg {

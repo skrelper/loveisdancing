@@ -1,0 +1,228 @@
+body {
+    min-width: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    min-height: 100vh;
+    height: auto;
+    display: block;
+    cursor: url("/content/svg/HeartBeatSymbol_Cyan.svg"), auto;
+}
+
+h1 {
+    display: none;
+}
+
+.big-container {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem;
+}
+
+.main-container {
+    width: min(80vw, 100%);
+    height: auto;
+    max-height: none;
+    box-sizing: border-box;
+    overflow: visible;
+    scrollbar-width: none;
+    margin: 20px 0 40px 0;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.grid-boxes {
+    display: grid;
+    width: 100%;
+    height: auto;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1em;
+
+    justify-items: stretch;
+    align-items: stretch;
+    justify-content: center;
+}
+
+@media (max-width: 620px) {
+    .grid-boxes {
+        grid-template-columns: 1fr;
+    }
+}
+
+.grid-box {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+}
+
+#message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1em;
+    background-color: var(--love);
+
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 1rem;
+    max-width: none;
+}
+
+.message {
+    width: 100%;
+    height: auto;
+    margin: 0;
+
+    font-family: Doto, sans-serif;
+    text-align: center;
+    font-weight: 800;
+    color: var(--snow);
+    letter-spacing: 0.95;
+    padding: 0 12%;
+    line-height: 1.05;
+}
+
+#message2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1em;
+    background-color: var(--heart);
+
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 1rem;
+    max-width: none;
+}
+
+.message2 {
+    width: 100%;
+    height: auto;
+    margin: 0;
+
+    font-family: Doto, sans-serif;
+    text-align: center;
+    font-weight: 800;
+    color: var(--snow);
+    letter-spacing: 0.95;
+    padding: 0 12%;
+    line-height: 1.05;
+}
+
+.message2 a {
+    color: var(--snow);
+    text-decoration: underline;
+}
+
+.message-header {
+    font-family: Doto, sans-serif;
+    font-weight: 1000;
+    color: var(--snow);
+    text-transform: uppercase;
+    text-align: center;
+    width: 50%;
+    line-height: 1.05;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.item-image {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.presave-button {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.item-image img,
+.grid-box .item-image a img,
+.grid-box .item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+#presave {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 100%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#presave img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    filter: blur(10px);
+    transform: scale(1.15);
+}
+
+#presave::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.25);
+}
+
+#presave .presave-copy {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    text-align: center;
+    color: var(--snow);
+    z-index: 1;
+    font-size: 1.5rem;
+}
+
+#presave .presave-copy span {
+    font-family: Doto, sans-serif;
+    font-weight: 1000;
+    text-shadow: 0 0 20px var(--snow);
+    color: var(--everything);
+    text-transform: uppercase;
+    width: 50%;
+    line-height: 1.05;
+}
+
+#blog-name {
+    color: var(--everything) !important;
+}
+
+#placeholder {
+    background-color: var(--heart)
+}
+
+@media (max-width: 620px) {
+    .grid-boxes {
+        grid-template-columns: 1fr;
+    }
+}

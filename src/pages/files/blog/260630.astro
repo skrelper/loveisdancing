@@ -1,0 +1,156 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Blog from '../../../layouts/blog.astro';
+import '../../../assets/files/journal.css';
+
+export const frontmatter = {
+  title: "The blog about HeartBeat",
+  date: "260630",
+};
+---
+
+<Layout title={frontmatter.date + " " + frontmatter.title} url="https://Loveisdancing.com/files/blog/260630">
+
+    <Blog
+    
+    date={frontmatter.date}
+    title={frontmatter.title}
+    caption="Photos by Ben Burton."
+    backgroundColor="var(--love)"
+    textColor="white"
+    invertLogo={true}
+
+    >
+    
+<!--     <div slot="image" class="blogimg"></div> -->
+<!--     <img src="/content/images/dead-pixels/snarl.jpg" slot="image" class="blogimg"> -->
+
+    <div slot="image" class="carousel">
+        <div class="track">
+            <div class="group">
+                <div class="card"><img src="/content/images/blog/260630/heartwindow.jpg"></div>
+                <div class="card"><img src="/content/images/blog/260630/heartwindow.jpg"></div>
+                <div class="card"><img src="/content/images/blog/260630/heartwindow.jpg"></div>
+                <div class="card"><img src="/content/images/blog/260630/heartwindow.jpg"></div>
+                <div class="card"><img src="/content/images/blog/260630/heartwindow.jpg"></div>
+                <div class="card"><img src="/content/images/blog/260630/heartwindow.jpg"></div>
+            </div>
+            <div aria-hidden class="group">
+                <div class="card"><img src="/content/images/blog/260630/heartwindow.jpg"></div>
+                <div class="card"><img src="/content/images/blog/260630/heartwindow.jpg"></div>
+                <div class="card"><img src="/content/images/blog/260630/heartwindow.jpg"></div>
+                <div class="card"><img src="/content/images/blog/260630/heartwindow.jpg"></div>
+                <div class="card"><img src="/content/images/blog/260630/heartwindow.jpg"></div>
+                <div class="card"><img src="/content/images/blog/260630/heartwindow.jpg"></div>
+            </div>
+        </div>
+    </div>
+
+    <p slot="journal">
+        Hello. Good morning or afternoon or evening. Today is movie night in Love Island. I've seen one episode in full. I am rooting for Brinity. Taking multiple breaks from writing this to watch TikTok. I have jam tonight. I just posted a snippet of Pollen Snow on Instagram. The Re: Stacks sample in Love is dancing is playing in the background as you read this. All will be okay.
+    </p>
+
+    <p slot="journal">
+        I have big dreams.
+    </p>
+
+    <p slot="journal">
+        HeartBeat is not a debut EP as much as I would like it to be one. It technically is, under Max Bass, but I've released plenty of projects and songs in the past under different names. The reason I wish it was a debut is because I think it's my best work to date. It came together so naturally and subconsciously that it feels like an emblem of who I am. Most of the songs I wrote in the years before this were love songs about people. The songs on HeartBeat are love songs for music. How I can literally feel a pulse and a beat. Sometimes it scares me how it's the strongest love I've ever felt.
+    </p>
+
+    <p slot="journal">
+        I've tried writing about the EP multiple times, but every single time I try to come up with something, it feels like I could never explain it as good as the music itself. What I love about abstract art is that everyone takes away their own meaning. But I think I'll go through each track and give maybe like a little summary or something about it idk. I'm trying really hard to not cringe at myself for writing this because it feels so self-indulgent, but I guess I'm not really forcing anyone to read it. And it's easy for me to organize my thoughts this way too.
+    </p>
+
+    <br slot="journal">
+
+    <h4 slot="journal">
+        Pollen Snow
+    </h4>
+
+    <p slot="journal">
+        A couple years ago, I was working on an EP called Before it burns. <a href="https://youtu.be/ukHzCk0bxm4?si=qwaXMPh_iv3TOlzz" target="_blank">DANCE</a> was going to be a part of it, but I bailed because it was more electronic than the other songs.
+    </p>
+
+    <p slot="journal">
+        Anyway, it was like my eighth year living at this one apartment complex with my mom and brother and when it was nice out, I would walk around the block, sometimes to Drug Mart, sometimes around neighboring complexes, but I would always make sure to walk along a path that passed by my favorite tree. It was sort of like a comfort thing, just looking at the tree made me happy and so I would try to walk near it as often as possible. My dad once asked me if I knew anything about it or what kind of tree it was, I said no and that I also don't care.
+    </p>
+
+    <p slot="journal">
+        The bliss of this tree and the early ideation phase of Before it burns lead to me making a poem called Before the world burns. One day, I saw a boy keeping a soccerball up in the air with his feet in front of the tree as his family sat on the porch and talked. Something about that visual just hit me so hard. Being young and doing your own thing and living in your own world as your family was near you but not engaging with you. I related. But not in a bad way, in a very awesome way.
+    </p>
+
+    <p slot="journal">
+        The poem went through many variations, it was kind of never finished and I kept adding things and taking things away. It almost became like an artist manifesto for my music career. But recently, as I was working on what would be HeartBeat, I used some of the poem as lyrics in Love is dancing (the second verse). Once I started forming the EP, I felt like Love is dancing needed a sibling, and the project needed an intro, so why not I incorporated the poem.
+    </p>
+
+    <p slot="journal">
+        All this to say, that's how Pollen Snow came to be. The instrumentation in the background is just stems from Love is dancing that I stretched.
+    </p>
+
+    <h4 slot="journal">
+        Love is dancing
+    </h4>
+
+    <p slot="journal">
+        Love is dancing started as me fucking around with some guitar samples. Originally, I just had the basis for the first half of the song, and didn't really know what to do for the second verse. And at this point, I believe I already had the spoken-word bit that I took from the aforementioned poem, so I thought why not just rework Before the world burns into a whole song.
+    </p>
+
+    <p slot="journal">
+        The meaning of the song is ineffable. The lyrics describe themselves perfectly, I feel. Love is the dance you do, and it's the music you play. You can take that literally or metaphorically.
+    </p>
+
+    <p slot="journal">
+        I do want to touch on the phrase "Love is music, dance is sex" because it sort of became like a life motto for me after writing it. It's not really a motto in the sense that I use it as a religion or a guide to help make decisions, but just something I think about a lot. I forgot to mention that the whole songwas inspired by a night that I went to a friend's houseparty for Halloween. The vibes were fun and the people playing their sets were fun but the friends that I brought didn't really like it.
+    </p>
+
+    <p slot="journal">
+        I think my subconscious took inspiration from Prince's D.M.S.R. and turned it into a metaphor. That houseparty was full of freeness, everyone dancing and vibing to the music. Even if they didn't know or like the music, they were still enjoying it to the fullest. If love is music, then dancing is the most intimate profession of it. Dance is fucking sex! This also insinuates sex is the most intimate profession of love, though. And to some, it is, but I don't know if I fully believe that.
+    </p>
+
+    <h4 slot="journal">
+        everything2me
+    </h4>
+
+    <p slot="journal">
+        This was the first song made for the EP. I was so fucking giddy because it just makes me want to move my body when I listen to it. Yeah, the mixing could be better, but it was recorded in my bedroom and I think the compression and messy vocals give it charm.
+    </p>
+
+    <p slot="journal">
+        I made most of the sounds on hardware that I own like my Minilogue XD or my KORG Volca. The Minilogue XD has some banger sounds preloaded and they all have a little loop, which is how the bumpy synth came to be. I kind of started with that then just kept adding things like the bass, the bell, the flubbery synth, you get it. That's literally how all songs are made I don't why I'm explaining that.
+    </p>
+
+    <p slot="journal">
+        I mumbled on it to get a basis for what the vocal melody could be, and then fit words to that. That process is actually something super new to me. Normally, I write things on my guitar and there's always like a phrase that I've written that kicks it off. But not with this one. I ended up writing it after the melody had been mostly mumbled, and it turned out to be kind of nonsense.
+    </p>
+
+    <h4 slot="journal">
+        It all just dies!
+    </h4>
+
+    <p slot="journal">
+        Alas, the final song of HeartBeat. I made this beat in a similar fashion to everything2me. Started on my Minilogue XD and then got into the arrangement afterward. Etiyene and I were playing around with my hardware and just entered a flow state when the loop on the Minilogue XD started playing. He brought in the DnB drums, and it just evolved from there. As we stopped the software was bugging and I was like imagine if all just dies. And that's what he named the file.
+    </p>
+
+    <p slot="journal">
+        All we really had was the beginning, but I knew it had to be on the EP as soon as we started it. Over a few weeks I wrote lyrics to the file name and related it back to the theme of what I wanted the EP to be. I started weaving in samples of Love is dancing and everything2me and then it was done.
+    </p>
+
+    <br slot="journal">
+
+    <p slot="journal">
+        I'm so happy and proud with how the project turned out. Early on, when Love is dancing was finished in like October 2025, I tried filming a music video twice and it just turned out not great. But I really want to film one this summer. If you read this far, thanks so much seriously. You're ahead of the game.
+    </p>
+
+    <audio slot="audio" autoplay loop id="bgaudio">
+    <source src="/content/audio/fx/lid_bon.ogg" type="audio/mpeg">
+    </audio>
+
+    </Blog>
+
+    <script>
+    var audio = document.getElementById("bgaudio") as HTMLAudioElement;
+    audio.volume = 0.2;
+    </script>
+
+</Layout>

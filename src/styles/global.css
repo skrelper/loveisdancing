@@ -3,10 +3,13 @@
 @tailwind utilities;
 
 :root {
-    --heart: rgb(234, 15,11);
+    --heart: rgb(255, 1, 28);
     --beat: rgb(0, 247, 246);
     --pollen: rgb(230, 230, 230);
     --pollen2: rgb(230, 230, 230, 0.35);
+    --snow: rgb(222, 254, 255);
+    --love: rgb(66, 66, 255);
+    --everything: rgb(254, 70, 53);
     --vh: 1vh;
     --cursor1: url("/content/svg/HeartBeatSymbol_Cyan.svg");
 }
